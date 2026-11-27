@@ -175,7 +175,7 @@ h1{letter-spacing:-.02em}
 class Component extends DCLogic {
   db(k, d) { try { const v = localStorage.getItem('vincula_' + k); return v ? JSON.parse(v) : d; } catch (e) { return (DCLogic.__mem && DCLogic.__mem[k]) || d; } }
   dbSet(k, v) { try { localStorage.setItem('vincula_' + k, JSON.stringify(v)); } catch (e) { DCLogic.__mem = DCLogic.__mem || {}; DCLogic.__mem[k] = v; } }
-  lista() { return this.db('empresas', this.seed()); }
+  lista() { const base = this.seed(); const salvas = this.db('empresas', base); const ids = salvas.map((x) => x.id); return salvas.concat(base.filter((x) => ids.indexOf(x.id) < 0)); }
   seed() { return [
     { id: 'ipe', nome: 'Marcenaria Ipê Ltda', sigla: 'MI', cnpj: '11.111.111/0001-11', regime: 'Simples Nacional', cidade: 'Pompéu', uf: 'MG', ie: '001.234567.00-11', cnae: '3101-2/00 · Fabricação de móveis', notas: 42, fat: 'R$ 168.400,00', pend: 2, pendTxt: '2 lançamentos', cert: 'Válido até 03/2027', fechado: false },
     { id: 'silva', nome: 'Silva Instalações Elétricas', sigla: 'SI', cnpj: '22.222.222/0001-22', regime: 'MEI', cidade: 'São Paulo', uf: 'SP', ie: 'Isento', cnae: '4321-5/00 · Instalação elétrica', notas: 9, fat: 'R$ 6.300,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 08/2027', fechado: true },
@@ -185,6 +185,8 @@ class Component extends DCLogic {
     { id: 'trigo', nome: 'Padaria Trigo Bom', sigla: 'TB', cnpj: '66.666.666/0001-66', regime: 'Simples Nacional', cidade: 'Pompéu', uf: 'MG', ie: '001.556677.00-22', cnae: '1091-1/02 · Padaria e confeitaria', notas: 5, fat: 'R$ 52.700,00', pend: 1, pendTxt: 'Extrato não enviado', cert: 'Válido até 10/2027', fechado: false },
     { id: 'rafael', nome: 'Rafael Lima Fotografia', sigla: 'RL', cnpj: '77.777.777/0001-77', regime: 'MEI', cidade: 'Florianópolis', uf: 'SC', ie: 'Isento', cnae: '7420-0/01 · Fotografia', notas: 6, fat: 'R$ 7.800,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 02/2027', fechado: true },
     { id: 'bompreco', nome: 'Mercado Bom Preço Ltda', sigla: 'BP', cnpj: '88.888.888/0001-88', regime: 'Lucro Presumido', cidade: 'Santos', uf: 'SP', ie: '633.112.233.114', cnae: '4711-3/02 · Supermercado', notas: 412, fat: 'R$ 296.300,00', pend: 3, pendTxt: '3 lançamentos', cert: 'Válido até 06/2027', fechado: false },
+    { id: 'ondaazul', nome: 'Pousada Onda Azul Ltda', sigla: 'OA', cnpj: '12.121.212/0001-12', regime: 'Simples Nacional', cidade: 'Balneário Camboriú', uf: 'SC', ie: '257.123.456', cnae: '5510-8/01 · Hotéis e pousadas', notas: 38, fat: 'R$ 94.600,00', pend: 2, pendTxt: '2 lançamentos', cert: 'Válido até 04/2027', fechado: false },
+    { id: 'textilvale', nome: 'Têxtil Vale Norte Ltda', sigla: 'TV', cnpj: '13.131.313/0001-13', regime: 'Lucro Presumido', cidade: 'Blumenau', uf: 'SC', ie: '258.654.321', cnae: '1412-6/01 · Confecção de roupas', notas: 73, fat: 'R$ 538.200,00', pend: 4, pendTxt: '3 lançamentos', cert: 'Vence em 20 dias', fechado: false },
     { id: 'valedosol', nome: 'Agropecuária Vale do Sol S.A.', sigla: 'VS', cnpj: '99.999.999/0001-99', regime: 'Lucro Real', cidade: 'Uberlândia', uf: 'MG', ie: '702.334455.00-88', cnae: '0151-2/01 · Criação de bovinos', notas: 87, fat: 'R$ 2.410.000,00', pend: 1, pendTxt: 'NF-e rejeitada', cert: 'Válido até 09/2027', fechado: false }
   ]; }
   empresaId() { if (true) return 'ipe'; if (this.state.__emp) return this.state.__emp; try { return localStorage.getItem('vincula_empresa') || 'ipe'; } catch (e) { return 'ipe'; } }
