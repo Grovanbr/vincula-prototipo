@@ -31,7 +31,7 @@ h1{letter-spacing:-.02em}
     <div style="flex:1 1 220px;max-width:460px;display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:0 12px;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input aria-label="Buscar" placeholder="Buscar empresa, nota, cliente, produto…" style="border:0;background:transparent;min-height:38px;padding:0;flex:1;min-width:0;outline:none"></div>
     <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
       <button aria-label="Notificações" style="position:relative;width:40px;height:40px;border-radius:9px;border:1px solid #E4E9EE;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D4D59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:#D97706"></span></button>
-      <div style="display:flex;align-items:center;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">AN</span><span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:13px;font-weight:600">Ana Ribeiro</span><span style="font-size:12px;color:#5A6B78">Contadora · Escritório Exemplo</span></span></div>
+      <a href="Config.html" title="Configurações" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#14212B"><span data-user-ini style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">AN</span><span style="display:flex;flex-direction:column;line-height:1.2"><span data-user-nome style="font-size:13px;font-weight:600">Ana Ribeiro</span><span style="font-size:12px;color:#5A6B78"><span data-user-cargo>Contadora</span> · <span data-esc-nome>Escritório Exemplo</span></span></span></a>
     </div>
   </header>
 <div style="display:flex;flex-wrap:wrap;flex:1">
@@ -61,9 +61,9 @@ h1{letter-spacing:-.02em}
 
     <div>
       <h1 style="margin:0;font-size:26px">Configurações do escritório</h1>
-      <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">Nome e logo aparecem no topo do sistema e na entrada dos seus clientes.</p>
+      <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">Nome do escritório, seu nome, cargo e logo aparecem no topo do sistema e na entrada dos seus clientes.</p>
     </div>
-    <template data-if="salvo"><div role="status" style="background:#ECF7F4;border:1px solid #BFE1D9;border-radius:10px;padding:12px 14px;font-size:14px;color:#0A5F52"><strong>Configurações salvas.</strong> Abra outra tela ou a entrada do cliente para ver o nome e a logo novos.</div></template>
+    <template data-if="salvo"><div role="status" style="background:#ECF7F4;border:1px solid #BFE1D9;border-radius:10px;padding:12px 14px;font-size:14px;color:#0A5F52"><strong>Configurações salvas.</strong> O topo já mostra os dados novos.</div></template>
     <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
       <section style="flex:999 1 480px;min-width:0;background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
         <h2 style="margin:0;font-size:17px">Dados do escritório</h2>
@@ -74,6 +74,11 @@ h1{letter-spacing:-.02em}
           <label>E-mail de atendimento<input value="{{c.email}}" onChange="{{f.email}}"></label>
           <label>WhatsApp<input value="{{c.whats}}" onChange="{{f.whats}}"></label>
           <label>Cidade / UF<input value="{{c.cidade}}" onChange="{{f.cidade}}"></label>
+        </div>
+        <h2 style="margin:6px 0 0;font-size:17px">Seu usuário</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+          <label>Seu nome<input value="{{c.usuario}}" onChange="{{f.usuario}}"></label>
+          <label>Cargo<input value="{{c.cargo}}" onChange="{{f.cargo}}" placeholder="Contador(a), Sócio(a), Analista…"></label>
         </div>
         <h2 style="margin:6px 0 0;font-size:17px">Logo</h2>
         <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:center">
@@ -138,11 +143,11 @@ class Component extends DCLogic {
 
   constructor(p) { super(p); this.state = { c: null, salvo: false }; }
   _rv() {
-    const padrao = { nome: 'Escritório Exemplo', cnpj: '00.000.000/0001-00', crc: 'MG-000000/O', email: 'contato@escritorio-exemplo.com.br', whats: '(37) 90000-0000', cidade: 'Pompéu / MG', logo: '' };
+    const padrao = { nome: 'Escritório Exemplo', cnpj: '00.000.000/0001-00', crc: 'MG-000000/O', email: 'contato@escritorio-exemplo.com.br', whats: '(37) 90000-0000', cidade: 'Pompéu / MG', logo: '', usuario: 'Ana Ribeiro', cargo: 'Contadora' };
     const c = this.state.c || Object.assign({}, padrao, this.db('escritorio', {}));
     const set = (k, v) => this.setState({ c: Object.assign({}, c, { [k]: v }), salvo: false });
     const f = {};
-    ['nome', 'cnpj', 'crc', 'email', 'whats', 'cidade'].forEach((k) => { f[k] = (e) => set(k, e.target.value); });
+    ['nome', 'cnpj', 'crc', 'email', 'whats', 'cidade', 'usuario', 'cargo'].forEach((k) => { f[k] = (e) => set(k, e.target.value); });
     const iniciais = (c.nome || 'EE').split(' ').filter((w) => w.length > 2).slice(0, 2).map((w) => w[0].toUpperCase()).join('') || 'EE';
     return {
       c, f, iniciais, temLogo: !!c.logo, semLogo: !c.logo, salvo: this.state.salvo,
@@ -153,7 +158,7 @@ class Component extends DCLogic {
         r.readAsDataURL(file);
       },
       tirarLogo: () => set('logo', ''),
-      salvar: () => { this.dbSet('escritorio', c); this.setState({ salvo: true }); }
+      salvar: () => { this.dbSet('escritorio', c); this.setState({ salvo: true }); try { if (window.VinculaMarca) window.VinculaMarca(); } catch (x) {} }
     };
   }
 }

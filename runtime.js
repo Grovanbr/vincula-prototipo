@@ -64,9 +64,15 @@ const DC = {
       while (n && n !== root) { path.unshift(Array.prototype.indexOf.call(n.parentNode.childNodes, n)); n = n.parentNode; }
       try { s0 = act.selectionStart; s1 = act.selectionEnd; } catch (x) {}
     }
+    const oldSel = Array.prototype.map.call(root.querySelectorAll('select'), (s) => s.value);
+    const oldChk = Array.prototype.map.call(root.querySelectorAll('input[type=checkbox]'), (c) => c.checked);
     const part = document.getElementById('dc-tpl').content.cloneNode(true);
     this.walk(part, this.comp.renderVals());
     root.replaceChildren(part);
+    const newSel = root.querySelectorAll('select');
+    if (newSel.length === oldSel.length) newSel.forEach((s, i) => { if (!s.hasAttribute('value') && Array.prototype.some.call(s.options, (o) => o.value === oldSel[i])) s.value = oldSel[i]; });
+    const newChk = root.querySelectorAll('input[type=checkbox]');
+    if (newChk.length === oldChk.length) newChk.forEach((c, i) => { if (!c.hasAttribute('checked')) c.checked = oldChk[i]; });
     if (path) {
       let n = root;
       for (const i of path) { n = n && n.childNodes[i]; }

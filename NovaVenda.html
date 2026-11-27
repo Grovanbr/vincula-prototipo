@@ -31,7 +31,7 @@ h1{letter-spacing:-.02em}
     <div style="flex:1 1 220px;max-width:460px;display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:0 12px;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input aria-label="Buscar" placeholder="Buscar empresa, nota, cliente, produto…" style="border:0;background:transparent;min-height:38px;padding:0;flex:1;min-width:0;outline:none"></div>
     <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
       <button aria-label="Notificações" style="position:relative;width:40px;height:40px;border-radius:9px;border:1px solid #E4E9EE;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D4D59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:#D97706"></span></button>
-      <div style="display:flex;align-items:center;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">AN</span><span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:13px;font-weight:600">Ana Ribeiro</span><span style="font-size:12px;color:#5A6B78">Contadora · Escritório Exemplo</span></span></div>
+      <a href="Config.html" title="Configurações" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#14212B"><span data-user-ini style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">AN</span><span style="display:flex;flex-direction:column;line-height:1.2"><span data-user-nome style="font-size:13px;font-weight:600">Ana Ribeiro</span><span style="font-size:12px;color:#5A6B78"><span data-user-cargo>Contadora</span> · <span data-esc-nome>Escritório Exemplo</span></span></span></a>
     </div>
   </header>
 <div style="display:flex;flex-wrap:wrap;flex:1">
@@ -86,10 +86,27 @@ h1{letter-spacing:-.02em}
         <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:14px">
           <h2 style="margin:0;font-size:16px">Cliente</h2>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
-            <label>Cliente<select onChange="{{pickCliente}}"><option>Carlos Mendes · CPF</option><option>Loja Casa Bela Ltda · CNPJ</option><option>+ Cadastrar novo cliente</option></select></label>
+            <label>Cliente<select value="{{clienteSel}}" onChange="{{pickCliente}}"><template data-for="clientes" data-as="c"><option value="{{c.nome}}">{{c.label}}</option></template><option value="__novo">+ Cadastrar novo cliente</option></select></label>
             <label>Vendedor<select><option>Carlos (dono)</option><option>Rita</option></select></label>
             <label>Validade do orçamento<input value="10 dias"></label>
           </div>
+          <template data-if="novoCli">
+            <div style="border:1px dashed #0E7C6B;background:#F5FBF9;border-radius:10px;padding:14px;display:flex;flex-direction:column;gap:12px">
+              <div style="font-weight:700;font-size:14px">Novo cliente</div>
+              <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px">
+                <label>Nome ou razão social<input value="{{nc.nome}}" onChange="{{ncSet.nome}}" placeholder="Ex.: Maria Souza"></label>
+                <label>CPF ou CNPJ<input value="{{nc.doc}}" onChange="{{ncSet.doc}}" placeholder="000.000.000-00"></label>
+                <label>Cidade/UF<input value="{{nc.cidade}}" onChange="{{ncSet.cidade}}" placeholder="Pompéu/MG"></label>
+                <label>Telefone / WhatsApp<input value="{{nc.fone}}" onChange="{{ncSet.fone}}" placeholder="(37) 90000-0000"></label>
+              </div>
+              <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+                <button onClick="{{salvarCli}}" style="background:#0E7C6B;color:#fff;border:1px solid #0E7C6B;border-radius:8px;padding:10px 14px;font-weight:600;font-size:14px;min-height:42px">Salvar cliente</button>
+                <button onClick="{{cancelarCli}}" style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:10px 14px;font-weight:600;font-size:14px;min-height:42px">Cancelar</button>
+                <span style="font-size:13px;color:#A3470A">{{ncErro}}</span>
+              </div>
+            </div>
+          </template>
+
         </section>
         <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:14px">
           <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:center">
@@ -205,7 +222,7 @@ class Component extends DCLogic {
 
   constructor(p) {
     super(p);
-    this.state = { cliente: 'Carlos Mendes · CPF', tipo: 'orc', pag: 'entrada', desc: 5, salvo: false, itens: [{ id: 'mesa', qtd: 1 }, { id: 'cad', qtd: 6 }] };
+    this.state = { cliente: 'Carlos Mendes', novoCli: false, nc: { nome: '', doc: '', cidade: '', fone: '' }, ncErro: '', tipo: 'orc', pag: 'entrada', desc: 5, salvo: false, itens: [{ id: 'mesa', qtd: 1 }, { id: 'cad', qtd: 6 }] };
   }
   _rv() {
     const cat = [
@@ -217,6 +234,7 @@ class Component extends DCLogic {
     ];
     const fmt = (n) => 'R$ ' + n.toFixed(2).replace('.', ',').replace(/\B(?=(\d{3})+(?!\d))/g, '.');
     const st = this.state;
+    const clientesLista = this.db('clientes_' + this.empresa().id, [{ nome: 'Carlos Mendes', doc: 'CPF 000.000.000-00', cidade: 'Pompéu/MG' }, { nome: 'Loja Casa Bela Ltda', doc: 'CNPJ 12.345.678/0001-00', cidade: 'Pompéu/MG' }]);
     const setItens = (fn) => this.setState({ itens: fn(st.itens.map((x) => Object.assign({}, x))) });
     const catalogo = cat.map((c) => ({ ...c, precoTxt: fmt(c.preco), add: () => setItens((l) => { const e = l.find((x) => x.id === c.id); if (e) e.qtd += 1; else l.push({ id: c.id, qtd: 1 }); return l; }) }));
     let sub = 0;
@@ -249,14 +267,26 @@ class Component extends DCLogic {
         const chave = 'vendas_' + this.empresa().id;
         const ant = this.db(chave, []);
         const n = orc ? 'Orçamento nº ' + String(219 + ant.filter((x) => x.tipo === 'orc').length).padStart(4, '0') : 'Pedido nº ' + (1044 + ant.filter((x) => x.tipo !== 'orc').length);
-        const reg = { tipo: st.tipo, num: n, cliente: st.cliente.split(' · ')[0], itens: itens.map((i) => i.qtd + 'x ' + i.nome).join(', '), pag: pagOpts.find((p) => p[0] === st.pag)[1], total: fmt(total), data: new Date().toLocaleDateString('pt-BR') };
+        const reg = { tipo: st.tipo, num: n, cliente: st.cliente, itens: itens.map((i) => i.qtd + 'x ' + i.nome).join(', '), pag: pagOpts.find((p) => p[0] === st.pag)[1], total: fmt(total), data: new Date().toLocaleDateString('pt-BR') };
         this.dbSet(chave, [reg].concat(ant));
         this.setState({ salvo: true, ultimo: n });
       },
       salvos: this.db('vendas_' + this.empresa().id, []),
       semSalvos: this.db('vendas_' + this.empresa().id, []).length === 0,
       novo: () => this.setState({ salvo: false, itens: [] }),
-      pickCliente: (e) => this.setState({ cliente: e.target.value })
+      pickCliente: (e) => { const v = e.target.value; if (v === '__novo') this.setState({ novoCli: true, ncErro: '' }); else this.setState({ cliente: v, novoCli: false }); },
+      cancelarCli: () => this.setState({ novoCli: false, nc: { nome: '', doc: '', cidade: '', fone: '' }, ncErro: '' }),
+      salvarCli: () => {
+        const nc = this.state.nc;
+        if (!nc.nome) { this.setState({ ncErro: 'Informe o nome do cliente.' }); return; }
+        const chave = 'clientes_' + this.empresa().id;
+        this.dbSet(chave, clientesLista.concat([{ nome: nc.nome, doc: nc.doc ? (nc.doc.replace(/\D/g, '').length > 11 ? 'CNPJ ' : 'CPF ') + nc.doc : 'Sem documento', cidade: nc.cidade, fone: nc.fone }]));
+        this.setState({ cliente: nc.nome, novoCli: false, nc: { nome: '', doc: '', cidade: '', fone: '' }, ncErro: '' });
+      },
+      clientes: clientesLista.map((c) => ({ nome: c.nome, label: c.nome + ' · ' + c.doc })),
+      clienteSel: this.state.novoCli ? '__novo' : st.cliente,
+      novoCli: this.state.novoCli, nc: this.state.nc, ncErro: this.state.ncErro,
+      ncSet: { nome: (e) => this.setState({ nc: Object.assign({}, this.state.nc, { nome: e.target.value }) }), doc: (e) => this.setState({ nc: Object.assign({}, this.state.nc, { doc: e.target.value }) }), cidade: (e) => this.setState({ nc: Object.assign({}, this.state.nc, { cidade: e.target.value }) }), fone: (e) => this.setState({ nc: Object.assign({}, this.state.nc, { fone: e.target.value }) }) }
     };
   }
 }
