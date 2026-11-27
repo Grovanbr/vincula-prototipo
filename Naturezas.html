@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Naturezas de operação e impostos · Vincula (protótipo)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:#F3F6F9;color:#14212B}
+a{color:#0E7C6B}a:hover{color:#0A5F52}
+.nav a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:9px;color:#C5D3DD;text-decoration:none;font-size:14px;font-weight:500}
+.nav a:hover{background:#13304B;color:#fff}
+.nav a.on{background:#0E7C6B;color:#fff}
+button{font-family:inherit;cursor:pointer}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#3D4D59;font-weight:500}
+input,select{font-family:inherit;font-size:14px;padding:10px 12px;border:1px solid #CBD4DB;border-radius:8px;background:#fff;color:#14212B;min-height:42px;box-sizing:border-box}
+th{font-weight:600;font-size:11px;color:#5A6B78;text-align:left;padding:10px 12px;border-bottom:1px solid #E4E9EE;background:#F8FAFB;text-transform:uppercase;letter-spacing:.05em}
+td{font-size:14px;padding:12px;border-bottom:1px solid #EEF1F4}
+tbody tr:hover{background:#F7FBFA}
+h1{letter-spacing:-.02em}
+</style>
+
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E4E9EE;display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:10px 20px;box-sizing:border-box">
+    <a href="Main.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#0B2239"><span style="width:34px;height:34px;border-radius:9px;background:#0E7C6B;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg></span><span style="font-weight:800;font-size:19px;letter-spacing:-.03em">Vincula</span><span style="font-size:11px;font-weight:700;color:#0A5F52;background:#E6F4F1;border-radius:6px;padding:2px 6px">ERP</span></a>
+    <button style="display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:#14212B;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Marcenaria Ipê Ltda</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div style="flex:1 1 220px;max-width:460px;display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:0 12px;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input aria-label="Buscar" placeholder="Buscar empresa, nota, cliente, produto…" style="border:0;background:transparent;min-height:38px;padding:0;flex:1;min-width:0;outline:none"></div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <button aria-label="Notificações" style="position:relative;width:40px;height:40px;border-radius:9px;border:1px solid #E4E9EE;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D4D59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:#D97706"></span></button>
+      <div style="display:flex;align-items:center;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">AN</span><span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:13px;font-weight:600">Ana Ribeiro</span><span style="font-size:12px;color:#5A6B78">Contadora · Escritório Exemplo</span></span></div>
+    </div>
+  </header>
+<div style="display:flex;flex-wrap:wrap;flex:1">
+  <nav class="nav" style="flex:1 1 220px;max-width:248px;background:#0B2239;padding:18px 12px;box-sizing:border-box;display:flex;flex-direction:column;gap:3px">
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">CONTABILIDADE</div>
+    <a href="Main.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Visão geral</span></a>
+    <a href="Empresa.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Empresas e regime</span></a>
+    <a class="on" href="Naturezas.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><span>Naturezas e impostos</span></a>
+    <a href="Documentos.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h6l2 2h10v11H3z"/></svg><span>Central de documentos</span></a>
+    <a href="Exportacao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 15v6h14v-6"/></svg><span>Exportação contábil</span></a>
+    <a href="Pendencias.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg><span>Pendências</span><span style="margin-left:auto;background:#D97706;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 7px">5</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">EMPRESA ABERTA</div>
+    <a href="Venda.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2 12h11l2-8H7"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg><span>Vendas e notas fiscais</span></a>
+    <a href="Financeiro.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg><span>Financeiro</span></a>
+    <a href="Integracao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg><span>Contabilidade do cliente</span></a>
+    <a href="Login.html" style="margin-top:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Sair</span></a>
+  </nav>
+  <main id="dc-root" style="flex:999 1 560px;min-width:0;padding:22px 28px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px"></main>
+</div>
+</div>
+<template id="dc-tpl">
+    <div style="font-size:12px;color:#5A6B78;font-weight:500">Contabilidade › Naturezas e impostos</div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
+      <div>
+        <h1 style="margin:0;font-size:26px">Naturezas de operação e impostos</h1>
+        <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">Marcenaria Ipê Ltda · Simples Nacional · o cliente só escolhe a natureza; o sistema preenche CFOP e impostos.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-wrap:wrap">
+        <button style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:11px 14px;font-weight:600;font-size:13px;min-height:44px">Copiar de outra empresa</button>
+        <button style="background:#0E7C6B;color:#fff;border:1px solid #0E7C6B;border-radius:8px;padding:11px 14px;font-weight:600;font-size:13px;min-height:44px">+ Nova natureza</button>
+      </div>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
+      <section style="flex:1 1 260px;max-width:340px;background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:12px;display:flex;flex-direction:column;gap:4px">
+        <template data-for="lista" data-as="n">
+          <button onClick="{{n.pick}}" style="{{n.style}}"><span style="font-weight:600;font-size:14px">{{n.nome}}</span><span style="font-size:12px;opacity:.8">{{n.tipo}}</span></button>
+        </template>
+      </section>
+      <div style="flex:999 1 480px;min-width:0;display:flex;flex-direction:column;gap:16px">
+        <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center">
+            <h2 style="margin:0;font-size:18px">{{atual.nome}}</h2>
+            <span style="background:#E6F4F1;color:#0A5F52;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600">{{atual.tipo}}</span>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;font-size:14px">
+            <div style="background:#F8FAFB;border-radius:10px;padding:12px"><div style="font-size:12px;color:#5A6B78">CFOP dentro do estado</div><div style="font-weight:700;font-size:18px;margin-top:4px">{{atual.cfopIn}}</div></div>
+            <div style="background:#F8FAFB;border-radius:10px;padding:12px"><div style="font-size:12px;color:#5A6B78">CFOP fora do estado</div><div style="font-weight:700;font-size:18px;margin-top:4px">{{atual.cfopOut}}</div></div>
+            <div style="background:#F8FAFB;border-radius:10px;padding:12px"><div style="font-size:12px;color:#5A6B78">Finalidade</div><div style="font-weight:700;font-size:18px;margin-top:4px">{{atual.fin}}</div></div>
+            <div style="background:#F8FAFB;border-radius:10px;padding:12px"><div style="font-size:12px;color:#5A6B78">Gera financeiro</div><div style="font-weight:700;font-size:18px;margin-top:4px">{{atual.fin2}}</div></div>
+          </div>
+          <h3 style="margin:4px 0 0;font-size:15px">Regras de tributação</h3>
+          <div style="overflow-x:auto">
+            <table style="width:100%;border-collapse:collapse;min-width:720px">
+              <thead><tr><th>Destino</th><th>NCM</th><th>ICMS</th><th>ICMS-ST / DIFAL</th><th>PIS/COFINS</th><th>IBS/CBS</th></tr></thead>
+              <tbody>
+                <template data-for="atual.regras" data-as="r">
+                  <tr><td style="font-weight:600">{{r.d}}</td><td>{{r.n}}</td><td>{{r.i}}</td><td>{{r.s}}</td><td>{{r.p}}</td><td>{{r.b}}</td></tr>
+                </template>
+              </tbody>
+            </table>
+          </div>
+          <div style="background:#F8FAFB;border:1px dashed #CBD4DB;border-radius:10px;padding:12px;font-size:13px;color:#3D4D59"><strong>Texto legal automático:</strong> {{atual.texto}}</div>
+        </section>
+        <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:14px">
+          <h2 style="margin:0;font-size:16px">Simulador: como a nota vai sair</h2>
+          <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:14px">
+            <span style="color:#5A6B78">Cliente em:</span>
+            <template data-for="ufs" data-as="u"><button onClick="{{u.pick}}" style="{{u.style}}">{{u.uf}}</button></template>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;font-size:14px">
+            <div><div style="font-size:12px;color:#5A6B78">CFOP usado</div><strong style="font-size:18px">{{sim.cfop}}</strong></div>
+            <div><div style="font-size:12px;color:#5A6B78">Código do ICMS</div><strong style="font-size:18px">{{sim.icms}}</strong></div>
+            <div><div style="font-size:12px;color:#5A6B78">DIFAL</div><strong style="font-size:18px">{{sim.difal}}</strong></div>
+            <div><div style="font-size:12px;color:#5A6B78">Validação</div><strong style="font-size:18px;color:#0A5F52">Sem erros</strong></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+</template>
+<script src="runtime.js"></script>
+<script>
+
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { sel: 0, uf: 'MG' }; }
+  renderVals() {
+    const nats = [
+      { nome: 'Venda de mercadoria', tipo: 'Saída · normal', cfopIn: '5102', cfopOut: '6102', fin: 'Normal', fin2: 'Contas a receber', texto: 'Documento emitido por ME ou EPP optante pelo Simples Nacional. Permite o aproveitamento do crédito de ICMS no valor de R$ [valor], alíquota de 1,25%.',
+        regras: [['MG (dentro do estado)', 'Todos', 'CSOSN 101 · crédito 1,25%', '—', 'CST 49', 'cClassTrib 000001'], ['Outros estados (contribuinte)', 'Todos', 'CSOSN 101', 'Sem ST', 'CST 49', 'cClassTrib 000001'], ['Outros estados (consumidor final)', 'Todos', 'CSOSN 102', 'DIFAL por UF + FCP', 'CST 49', 'cClassTrib 000001']] },
+      { nome: 'Venda com ST', tipo: 'Saída · normal', cfopIn: '5405', cfopOut: '6404', fin: 'Normal', fin2: 'Contas a receber', texto: 'ICMS retido anteriormente por substituição tributária.',
+        regras: [['MG', '9403.30.00', 'CSOSN 500', 'ST retida anteriormente', 'CST 49', 'cClassTrib 000001'], ['SP', '9403.30.00', 'CSOSN 201', 'MVA ajustada 52,6%', 'CST 49', 'cClassTrib 000001']] },
+      { nome: 'Devolução de compra', tipo: 'Saída · devolução', cfopIn: '5202', cfopOut: '6202', fin: 'Devolução', fin2: 'Abate contas a pagar', texto: 'Devolução referente à NF [número] de [data].',
+        regras: [['Todos', 'Todos', 'Mesmo da nota de origem', 'Destaca ST se houver', 'CST 49', 'Conforme origem']] },
+      { nome: 'Remessa para conserto', tipo: 'Saída · remessa', cfopIn: '5915', cfopOut: '6915', fin: 'Normal', fin2: 'Não gera', texto: 'Remessa para conserto, com retorno previsto.',
+        regras: [['Todos', 'Todos', 'CSOSN 400', '—', 'CST 08', 'Não incide']] },
+      { nome: 'Prestação de serviço', tipo: 'NFS-e', cfopIn: '—', cfopOut: '—', fin: 'Normal', fin2: 'Contas a receber', texto: 'Serviço 07.02 · ISS 3% conforme LC 116.',
+        regras: [['Pompéu/MG', 'Serviço 07.02', 'ISS 3% · não retido', 'Retenções federais conforme valor', 'No DAS', 'cClassTrib 000001']] },
+      { nome: 'Entrada de mercadoria', tipo: 'Entrada · normal', cfopIn: '1102', cfopOut: '2102', fin: 'Normal', fin2: 'Contas a pagar', texto: 'Entrada pelo XML do fornecedor, com estoque atualizado.',
+        regras: [['Todos', 'Todos', 'Conforme XML', 'Conforme XML', 'CST 98', 'Conforme XML']] }
+    ];
+    const sel = this.state.sel;
+    const lista = nats.map((n, i) => ({ ...n, pick: () => this.setState({ sel: i }), style: 'display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;border:0;border-radius:10px;padding:10px 12px;min-height:44px;' + (i === sel ? 'background:#0B2239;color:#fff' : 'background:transparent;color:#14212B') }));
+    const uf = this.state.uf;
+    const ufs = ['MG', 'SP', 'BA'].map((u) => ({ uf: u, pick: () => this.setState({ uf: u }), style: 'border-radius:999px;padding:8px 16px;font-weight:600;font-size:13px;min-height:40px;' + (u === uf ? 'background:#0B2239;color:#fff;border:1px solid #0B2239' : 'background:#fff;color:#14212B;border:1px solid #CBD4DB') }));
+    const a = nats[sel];
+    const dentro = uf === 'MG';
+    const sim = { cfop: dentro ? a.cfopIn : a.cfopOut, icms: a.regras[dentro ? 0 : Math.min(1, a.regras.length - 1)][2].split(' · ')[0], difal: (!dentro && sel === 0) ? 'Calculado para ' + uf : 'Não se aplica' };
+    const atual = Object.assign({}, a, { regras: a.regras.map((r) => ({ d: r[0], n: r[1], i: r[2], s: r[3], p: r[4], b: r[5] })) });
+    return { lista, atual, ufs, sim };
+  }
+}
+
+DC.start(Component);
+</script>
+</body>
+</html>

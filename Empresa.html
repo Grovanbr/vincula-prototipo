@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cadastro da empresa e regime · Vincula (protótipo)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:#F3F6F9;color:#14212B}
+a{color:#0E7C6B}a:hover{color:#0A5F52}
+.nav a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:9px;color:#C5D3DD;text-decoration:none;font-size:14px;font-weight:500}
+.nav a:hover{background:#13304B;color:#fff}
+.nav a.on{background:#0E7C6B;color:#fff}
+button{font-family:inherit;cursor:pointer}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#3D4D59;font-weight:500}
+input,select{font-family:inherit;font-size:14px;padding:10px 12px;border:1px solid #CBD4DB;border-radius:8px;background:#fff;color:#14212B;min-height:42px;box-sizing:border-box}
+th{font-weight:600;font-size:11px;color:#5A6B78;text-align:left;padding:10px 12px;border-bottom:1px solid #E4E9EE;background:#F8FAFB;text-transform:uppercase;letter-spacing:.05em}
+td{font-size:14px;padding:12px;border-bottom:1px solid #EEF1F4}
+tbody tr:hover{background:#F7FBFA}
+h1{letter-spacing:-.02em}
+</style>
+
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E4E9EE;display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:10px 20px;box-sizing:border-box">
+    <a href="Main.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#0B2239"><span style="width:34px;height:34px;border-radius:9px;background:#0E7C6B;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg></span><span style="font-weight:800;font-size:19px;letter-spacing:-.03em">Vincula</span><span style="font-size:11px;font-weight:700;color:#0A5F52;background:#E6F4F1;border-radius:6px;padding:2px 6px">ERP</span></a>
+    <button style="display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:#14212B;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Marcenaria Ipê Ltda</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div style="flex:1 1 220px;max-width:460px;display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:0 12px;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input aria-label="Buscar" placeholder="Buscar empresa, nota, cliente, produto…" style="border:0;background:transparent;min-height:38px;padding:0;flex:1;min-width:0;outline:none"></div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <button aria-label="Notificações" style="position:relative;width:40px;height:40px;border-radius:9px;border:1px solid #E4E9EE;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D4D59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:#D97706"></span></button>
+      <div style="display:flex;align-items:center;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">AN</span><span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:13px;font-weight:600">Ana Ribeiro</span><span style="font-size:12px;color:#5A6B78">Contadora · Escritório Exemplo</span></span></div>
+    </div>
+  </header>
+<div style="display:flex;flex-wrap:wrap;flex:1">
+  <nav class="nav" style="flex:1 1 220px;max-width:248px;background:#0B2239;padding:18px 12px;box-sizing:border-box;display:flex;flex-direction:column;gap:3px">
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">CONTABILIDADE</div>
+    <a href="Main.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Visão geral</span></a>
+    <a class="on" href="Empresa.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Empresas e regime</span></a>
+    <a href="Naturezas.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><span>Naturezas e impostos</span></a>
+    <a href="Documentos.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h6l2 2h10v11H3z"/></svg><span>Central de documentos</span></a>
+    <a href="Exportacao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 15v6h14v-6"/></svg><span>Exportação contábil</span></a>
+    <a href="Pendencias.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg><span>Pendências</span><span style="margin-left:auto;background:#D97706;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 7px">5</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">EMPRESA ABERTA</div>
+    <a href="Venda.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2 12h11l2-8H7"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg><span>Vendas e notas fiscais</span></a>
+    <a href="Financeiro.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg><span>Financeiro</span></a>
+    <a href="Integracao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg><span>Contabilidade do cliente</span></a>
+    <a href="Login.html" style="margin-top:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Sair</span></a>
+  </nav>
+  <main id="dc-root" style="flex:999 1 560px;min-width:0;padding:22px 28px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px"></main>
+</div>
+</div>
+<template id="dc-tpl">
+    <div style="font-size:12px;color:#5A6B78;font-weight:500">Contabilidade › Empresas › Marcenaria Ipê Ltda</div>
+
+    <div>
+      <a href="Main.html" style="font-size:13px;text-decoration:none">← Voltar ao painel</a>
+      <h1 style="margin:8px 0 0;font-size:26px">Cadastro da empresa</h1>
+      <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">Configuração feita só pelo escritório. O cliente não vê nem altera esta tela.</p>
+    </div>
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+      <h2 style="margin:0;font-size:17px">Dados da empresa</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+        <label>CNPJ<div style="display:flex;gap:8px"><input value="11.111.111/0001-11" style="flex:1;min-width:0"><button style="background:#E6F4F1;color:#0A5F52;border:1px solid #BFDCD6;border-radius:8px;padding:0 12px;font-weight:600;font-size:13px">Buscar</button></div></label>
+        <label>Razão social<input value="Marcenaria Ipê Ltda"></label>
+        <label>Inscrição estadual<input value="001.234567.00-11"></label>
+        <label>Inscrição municipal<input value="12345"></label>
+        <label>Município / UF<input value="Pompéu / MG"></label>
+        <label>CNAE principal<input value="3101-2/00 · Fabricação de móveis"></label>
+      </div>
+    </section>
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div>
+        <h2 style="margin:0;font-size:17px">Regime tributário</h2>
+        <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">Escolha o regime. O sistema ajusta sozinho as notas, os impostos e os relatórios desta empresa.</p>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px">
+        <template data-for="regimes" data-as="r">
+          <button onClick="{{r.pick}}" style="{{r.style}}">{{r.label}}</button>
+        </template>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+        <label>Início da vigência<input value="01/01/2026"></label>
+        <label>Regime especial de ISS<select><option>Nenhum</option><option>Microempresa municipal</option><option>Sociedade profissional</option></select></label>
+      </div>
+      <div style="background:#ECF7F4;border:1px solid #BFE1D9;border-radius:10px;padding:16px;display:flex;flex-direction:column;gap:10px">
+        <div style="font-weight:600;font-size:14px;color:#0A5F52">O sistema ajusta automaticamente para {{atual}}:</div>
+        <template data-for="ajustes" data-as="a">
+          <div style="display:flex;gap:10px;font-size:14px;align-items:flex-start">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0E7C6B" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex:none;margin-top:1px"><path d="M20 6 9 17l-5-5"></path></svg>
+            <span>{{a}}</span>
+          </div>
+        </template>
+      </div>
+    </section>
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+      <h2 style="margin:0;font-size:17px">Emissão de notas</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px">
+        <label>Certificado digital A1<div style="display:flex;gap:8px;align-items:center"><button style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;min-height:44px">Enviar arquivo .pfx</button><span style="font-size:13px;color:#0E7C6B;font-weight:600">Válido até 03/2027</span></div></label>
+        <label>Série da NF-e<input value="1"></label>
+        <label>Próximo número<input value="1043"></label>
+        <label>Ambiente<select><option>Homologação (testes)</option><option>Produção</option></select></label>
+      </div>
+    </section>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:flex-end">
+      <a href="Main.html" style="padding:12px 18px;border-radius:8px;border:1px solid #CBD4DB;color:#14212B;text-decoration:none;font-weight:600;font-size:14px;background:#fff">Cancelar</a>
+      <a href="Main.html" style="padding:12px 18px;border-radius:8px;background:#0E7C6B;color:#fff;text-decoration:none;font-weight:600;font-size:14px">Salvar empresa</a>
+    </div>
+  
+</template>
+<script src="runtime.js"></script>
+<script>
+
+class Component extends DCLogic {
+  constructor(p) { super(p); this.state = { regime: 'Simples Nacional' }; }
+  renderVals() {
+    const mapa = {
+      'MEI': ['CRT 4 (MEI) na NF-e', 'NFS-e emitida como MEI', 'Alerta ao chegar perto do limite anual de faturamento', 'Naturezas de operação prontas para MEI'],
+      'Simples Nacional': ['CRT 1 e códigos CSOSN nas notas', 'Crédito de ICMS do Simples informado na NF-e', 'ISS e tributos federais dentro do DAS', 'Estimativa mensal do DAS pela faixa de faturamento'],
+      'Simples (excesso de sublimite)': ['CRT 2 nas notas', 'ICMS e ISS calculados fora do DAS', 'Alertas de sublimite estadual e municipal', 'Naturezas de operação ajustadas'],
+      'Lucro Presumido': ['CRT 3 e códigos CST nas notas', 'PIS/COFINS cumulativo (0,65% / 3%)', 'ICMS, IPI e ISS pelas regras cadastradas', 'Relatório de impostos do período'],
+      'Lucro Real': ['CRT 3 e códigos CST nas notas', 'PIS/COFINS não cumulativo (1,65% / 7,6%)', 'Crédito de PIS/COFINS nas notas de entrada', 'Relatório de débitos e créditos do período']
+    };
+    const sel = this.state.regime;
+    const base = 'border-radius:8px;padding:10px 16px;font-size:14px;font-weight:600;min-height:44px;';
+    const regimes = Object.keys(mapa).map((k) => ({
+      label: k,
+      pick: () => this.setState({ regime: k }),
+      style: base + (k === sel ? 'background:#0B2239;color:#fff;border:1px solid #0B2239' : 'background:#fff;color:#14212B;border:1px solid #CBD4DB')
+    }));
+    return { regimes, ajustes: mapa[sel], atual: sel };
+  }
+}
+
+DC.start(Component);
+</script>
+</body>
+</html>

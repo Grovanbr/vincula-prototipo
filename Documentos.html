@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Central de documentos · Vincula (protótipo)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:#F3F6F9;color:#14212B}
+a{color:#0E7C6B}a:hover{color:#0A5F52}
+.nav a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:9px;color:#C5D3DD;text-decoration:none;font-size:14px;font-weight:500}
+.nav a:hover{background:#13304B;color:#fff}
+.nav a.on{background:#0E7C6B;color:#fff}
+button{font-family:inherit;cursor:pointer}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#3D4D59;font-weight:500}
+input,select{font-family:inherit;font-size:14px;padding:10px 12px;border:1px solid #CBD4DB;border-radius:8px;background:#fff;color:#14212B;min-height:42px;box-sizing:border-box}
+th{font-weight:600;font-size:11px;color:#5A6B78;text-align:left;padding:10px 12px;border-bottom:1px solid #E4E9EE;background:#F8FAFB;text-transform:uppercase;letter-spacing:.05em}
+td{font-size:14px;padding:12px;border-bottom:1px solid #EEF1F4}
+tbody tr:hover{background:#F7FBFA}
+h1{letter-spacing:-.02em}
+</style>
+
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E4E9EE;display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:10px 20px;box-sizing:border-box">
+    <a href="Main.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#0B2239"><span style="width:34px;height:34px;border-radius:9px;background:#0E7C6B;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg></span><span style="font-weight:800;font-size:19px;letter-spacing:-.03em">Vincula</span><span style="font-size:11px;font-weight:700;color:#0A5F52;background:#E6F4F1;border-radius:6px;padding:2px 6px">ERP</span></a>
+    <button style="display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:#14212B;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Todas as empresas</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div style="flex:1 1 220px;max-width:460px;display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:0 12px;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input aria-label="Buscar" placeholder="Buscar empresa, nota, cliente, produto…" style="border:0;background:transparent;min-height:38px;padding:0;flex:1;min-width:0;outline:none"></div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <button aria-label="Notificações" style="position:relative;width:40px;height:40px;border-radius:9px;border:1px solid #E4E9EE;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D4D59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:#D97706"></span></button>
+      <div style="display:flex;align-items:center;gap:10px"><span style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">AN</span><span style="display:flex;flex-direction:column;line-height:1.2"><span style="font-size:13px;font-weight:600">Ana Ribeiro</span><span style="font-size:12px;color:#5A6B78">Contadora · Escritório Exemplo</span></span></div>
+    </div>
+  </header>
+<div style="display:flex;flex-wrap:wrap;flex:1">
+  <nav class="nav" style="flex:1 1 220px;max-width:248px;background:#0B2239;padding:18px 12px;box-sizing:border-box;display:flex;flex-direction:column;gap:3px">
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">CONTABILIDADE</div>
+    <a href="Main.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Visão geral</span></a>
+    <a href="Empresa.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Empresas e regime</span></a>
+    <a href="Naturezas.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><span>Naturezas e impostos</span></a>
+    <a class="on" href="Documentos.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h6l2 2h10v11H3z"/></svg><span>Central de documentos</span></a>
+    <a href="Exportacao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 15v6h14v-6"/></svg><span>Exportação contábil</span></a>
+    <a href="Pendencias.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg><span>Pendências</span><span style="margin-left:auto;background:#D97706;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 7px">5</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">EMPRESA ABERTA</div>
+    <a href="Venda.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2 12h11l2-8H7"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg><span>Vendas e notas fiscais</span></a>
+    <a href="Financeiro.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg><span>Financeiro</span></a>
+    <a href="Integracao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg><span>Contabilidade do cliente</span></a>
+    <a href="Login.html" style="margin-top:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Sair</span></a>
+  </nav>
+  <main id="dc-root" style="flex:999 1 560px;min-width:0;padding:22px 28px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px"></main>
+</div>
+</div>
+<template id="dc-tpl">
+    <div style="font-size:12px;color:#5A6B78;font-weight:500">Contabilidade › Central de documentos</div>
+
+    <div>
+      <h1 style="margin:0;font-size:26px">Central de documentos</h1>
+      <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">Filtre por empresa, pegue os documentos, gere o arquivo contábil e envie documentos ao cliente.</p>
+    </div>
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;align-items:end">
+        <label>Empresa<select onChange="{{pickEmpresa}}"><option>Marcenaria Ipê Ltda</option><option>Comercial Boa Vista Ltda</option><option>Padaria Trigo Bom</option></select></label>
+        <label>Competência<select><option>Outubro/2026</option><option>Novembro/2026</option></select></label>
+        <label>Tipo<select><option>Todos os documentos</option><option>Notas emitidas (XML)</option><option>Notas de compra (XML)</option><option>Extratos</option><option>Lançamentos</option></select></label>
+      </div>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;min-width:620px">
+          <thead><tr><th>Documento</th><th>Quantidade</th><th>Situação</th></tr></thead>
+          <tbody>
+            <template data-for="docs" data-as="d">
+              <tr><td style="font-weight:600">{{d.nome}}</td><td>{{d.qtd}}</td><td style="{{d.st}}">{{d.sit}}</td></tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:12px">
+        <button style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:12px 16px;font-weight:600;font-size:14px;min-height:44px">Baixar tudo em ZIP</button>
+        <button onClick="{{gerar}}" style="background:#0E7C6B;color:#fff;border:1px solid #0E7C6B;border-radius:8px;padding:12px 16px;font-weight:600;font-size:14px;min-height:44px">Gerar arquivo para o sistema contábil</button>
+      </div>
+      <template data-if="gerado">
+        <div role="status" style="background:#ECF7F4;border:1px solid #BFE1D9;border-radius:10px;padding:14px;font-size:14px;color:#0A5F52">Arquivo gerado: <strong>lancamentos_{{empresaCurta}}_10-2026.txt</strong> no layout do sistema contábil do escritório, com o de-para do plano de contas.</div>
+      </template>
+    </section>
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+      <h2 style="margin:0;font-size:17px">Enviar documento ao cliente</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px;align-items:end">
+        <label>Tipo de documento<select onChange="{{pickTipo}}"><option>Guia do DAS</option><option>Guia DARF</option><option>Holerites</option><option>Balancete</option><option>Boleto de honorários</option></select></label>
+        <label>Arquivo<button style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:10px 14px;font-size:13px;font-weight:600;min-height:44px;text-align:left">Escolher arquivo PDF</button></label>
+        <label>Vencimento<input value="20/11/2026"></label>
+        <button onClick="{{enviar}}" style="background:#0B2239;color:#fff;border:1px solid #0B2239;border-radius:8px;padding:12px 16px;font-weight:600;font-size:14px;min-height:44px">Enviar ao cliente</button>
+      </div>
+      <p style="margin:0;font-size:13px;color:#5A6B78">O cliente recebe no app e por e-mail ou WhatsApp, com lembrete automático antes do vencimento.</p>
+      <div style="overflow-x:auto">
+        <table style="width:100%;border-collapse:collapse;min-width:620px">
+          <thead><tr><th>Documento</th><th>Enviado em</th><th>Vencimento</th><th>Situação</th></tr></thead>
+          <tbody>
+            <template data-for="envios" data-as="e">
+              <tr><td style="font-weight:600">{{e.doc}}</td><td>{{e.data}}</td><td>{{e.venc}}</td><td style="{{e.st}}">{{e.sit}}</td></tr>
+            </template>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  
+</template>
+<script src="runtime.js"></script>
+<script>
+
+class Component extends DCLogic {
+  constructor(p) {
+    super(p);
+    this.state = { empresa: 'Marcenaria Ipê Ltda', tipo: 'Guia do DAS', gerado: false, extras: [] };
+  }
+  renderVals() {
+    const ok = 'color:#0E7C6B;font-weight:600';
+    const warn = 'color:#A3470A;font-weight:600';
+    const porEmpresa = {
+      'Marcenaria Ipê Ltda': [['NF-e emitidas (XML + PDF)', 38, 'Completo'], ['NFS-e emitidas', 4, 'Completo'], ['Notas de compra (XML)', 21, 'Completo'], ['Extrato bancário (OFX)', 2, 'Conciliado'], ['Lançamentos financeiros', 156, '2 pendentes']],
+      'Comercial Boa Vista Ltda': [['NF-e emitidas (XML + PDF)', 61, 'Completo'], ['Notas de compra (XML)', 47, 'Completo'], ['Extrato bancário (OFX)', 3, '5 pendentes'], ['Lançamentos financeiros', 230, '5 pendentes']],
+      'Padaria Trigo Bom': [['NFC-e emitidas (XML)', 5, 'Completo'], ['Notas de compra (XML)', 12, 'Completo'], ['Extrato bancário (OFX)', 0, 'Não enviado']]
+    };
+    const docs = porEmpresa[this.state.empresa].map((d) => ({ nome: d[0], qtd: d[1], sit: d[2], st: (d[2] === 'Completo' || d[2] === 'Conciliado') ? ok : warn }));
+    const base = [
+      { doc: 'Guia do DAS · Outubro/2026', data: '10/11/2026', venc: '20/11/2026', sit: 'Visualizado e baixado', st: ok },
+      { doc: 'Holerites · Outubro/2026', data: '05/11/2026', venc: '—', sit: 'Enviado, não aberto', st: warn }
+    ];
+    const envios = this.state.extras.concat(base);
+    return {
+      docs,
+      envios,
+      gerado: this.state.gerado,
+      empresaCurta: this.state.empresa.split(' ')[0].toLowerCase(),
+      pickEmpresa: (e) => this.setState({ empresa: e.target.value, gerado: false }),
+      pickTipo: (e) => this.setState({ tipo: e.target.value }),
+      gerar: () => this.setState({ gerado: true }),
+      enviar: () => this.setState({ extras: [{ doc: this.state.tipo + ' · ' + this.state.empresa, data: '27/11/2026', venc: '20/12/2026', sit: 'Enviado agora', st: ok }].concat(this.state.extras) })
+    };
+  }
+}
+
+DC.start(Component);
+</script>
+</body>
+</html>

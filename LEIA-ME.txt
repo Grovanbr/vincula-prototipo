@@ -1,0 +1,8 @@
+Protótipo Vincula - versão para teste (dados fictícios)
+
+Entradas:
+- Contabilidade: index.html (ou Login.html)
+- Cliente: LoginCliente.html
+- Tutorial: Tutorial.html
+
+Para publicar de graça, envie a pasta inteira para o GitHub Pages ou para o Netlify.
