@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- ARQUIVO DE DEMONSTRACAO DO PROTOTIPO VINCULA - DADOS FICTICIOS - SEM VALOR FISCAL -->
+<nfeProc xmlns="http://www.portalfiscal.inf.br/nfe" versao="4.00">
+  <NFe>
+    <infNFe Id="NFe31261111111111110001155001000001043100000010" versao="4.00">
+      <ide><cUF>31</cUF><natOp>Venda de mercadoria</natOp><mod>55</mod><serie>1</serie><nNF>1043</nNF><dhEmi>2026-11-27T10:15:00-03:00</dhEmi><tpNF>1</tpNF><cMunFG>3152006</cMunFG><tpAmb>2</tpAmb><finNFe>1</finNFe></ide>
+      <emit><CNPJ>11111111000111</CNPJ><xNome>Marcenaria Ipe Ltda (exemplo)</xNome><enderEmit><xMun>Pompeu</xMun><UF>MG</UF></enderEmit><IE>0012345670011</IE><CRT>1</CRT></emit>
+      <dest><CPF>00000000000</CPF><xNome>NF-E EMITIDA EM AMBIENTE DE HOMOLOGACAO - SEM VALOR FISCAL</xNome><enderDest><xMun>Pompeu</xMun><UF>MG</UF></enderDest><indIEDest>9</indIEDest></dest>
+      <det nItem="1"><prod><cProd>MESA180</cProd><xProd>Mesa de jantar em ipe 1,80 m</xProd><NCM>94033000</NCM><CFOP>5102</CFOP><uCom>UN</uCom><qCom>1.0000</qCom><vUnCom>1800.00</vUnCom><vProd>1800.00</vProd><vDesc>90.00</vDesc></prod>
+        <imposto><ICMS><ICMSSN101><orig>0</orig><CSOSN>101</CSOSN><pCredSN>1.25</pCredSN><vCredICMSSN>21.38</vCredICMSSN></ICMSSN101></ICMS></imposto></det>
+      <det nItem="2"><prod><cProd>CAD01</cProd><xProd>Cadeira estofada em ipe</xProd><NCM>94016100</NCM><CFOP>5102</CFOP><uCom>UN</uCom><qCom>6.0000</qCom><vUnCom>320.00</vUnCom><vProd>1920.00</vProd><vDesc>96.00</vDesc></prod>
+        <imposto><ICMS><ICMSSN101><orig>0</orig><CSOSN>101</CSOSN><pCredSN>1.25</pCredSN><vCredICMSSN>22.80</vCredICMSSN></ICMSSN101></ICMS></imposto></det>
+      <total><ICMSTot><vProd>3720.00</vProd><vDesc>186.00</vDesc><vNF>3534.00</vNF><vTotTrib>487.69</vTotTrib></ICMSTot></total>
+      <infAdic><infCpl>Documento emitido por ME ou EPP optante pelo Simples Nacional. Arquivo de demonstracao.</infCpl></infAdic>
+    </infNFe>
+  </NFe>
+  <protNFe versao="4.00"><infProt><tpAmb>2</tpAmb><chNFe>31261111111111110001155001000001043100000010</chNFe><cStat>100</cStat><xMotivo>Autorizado o uso da NF-e (homologacao - exemplo)</xMotivo></infProt></protNFe>
+</nfeProc>

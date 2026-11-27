@@ -27,7 +27,7 @@ h1{letter-spacing:-.02em}
 <div style="min-height:100vh;display:flex;flex-direction:column">
   <header style="background:#fff;border-bottom:1px solid #E4E9EE;display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:10px 20px;box-sizing:border-box">
     <a href="Main.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#0B2239"><span style="width:34px;height:34px;border-radius:9px;background:#0E7C6B;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg></span><span style="font-weight:800;font-size:19px;letter-spacing:-.03em">Vincula</span><span style="font-size:11px;font-weight:700;color:#0A5F52;background:#E6F4F1;border-radius:6px;padding:2px 6px">ERP</span></a>
-    <button style="display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:#14212B;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Marcenaria Ipê Ltda</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></button>
+    <div style="display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:#14212B;min-height:40px;box-sizing:border-box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span data-esc-nome>Escritório Exemplo</span></div>
     <div style="flex:1 1 220px;max-width:460px;display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:0 12px;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input aria-label="Buscar" placeholder="Buscar empresa, nota, cliente, produto…" style="border:0;background:transparent;min-height:38px;padding:0;flex:1;min-width:0;outline:none"></div>
     <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
       <button aria-label="Notificações" style="position:relative;width:40px;height:40px;border-radius:9px;border:1px solid #E4E9EE;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D4D59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:#D97706"></span></button>
@@ -36,35 +36,75 @@ h1{letter-spacing:-.02em}
   </header>
 <div style="display:flex;flex-wrap:wrap;flex:1">
   <nav class="nav" style="flex:1 1 220px;max-width:248px;background:#0B2239;padding:18px 12px;box-sizing:border-box;display:flex;flex-direction:column;gap:3px">
-    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">CONTABILIDADE</div>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">ESCRITÓRIO</div>
     <a href="Main.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Visão geral</span></a>
-    <a href="Empresa.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Empresas e regime</span></a>
+    <a href="Pendencias.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg><span>Pendências de todas</span><span style="margin-left:auto;background:#D97706;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 7px">7</span></a>
+    <a href="Config.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span>Configurações</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">EMPRESA SELECIONADA</div>
+    <a href="EmpresaHome.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Visão da empresa</span></a>
+    <a href="Empresa.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span>Cadastro e regime</span></a>
     <a class="on" href="Naturezas.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 5 5 19"/><circle cx="7" cy="7" r="2.5"/><circle cx="17" cy="17" r="2.5"/></svg><span>Naturezas e impostos</span></a>
-    <a href="Documentos.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h6l2 2h10v11H3z"/></svg><span>Central de documentos</span></a>
+    <a href="Documentos.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 6h6l2 2h10v11H3z"/></svg><span>Documentos</span></a>
     <a href="Exportacao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3M7 8l5-5 5 5"/><path d="M5 15v6h14v-6"/></svg><span>Exportação contábil</span></a>
-    <a href="Pendencias.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2 21h20z"/><path d="M12 10v5M12 18h.01"/></svg><span>Pendências</span><span style="margin-left:auto;background:#D97706;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 7px">5</span></a>
-    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">EMPRESA ABERTA</div>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">MOVIMENTO DA EMPRESA</div>
     <a href="Venda.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2 12h11l2-8H7"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg><span>Vendas e notas fiscais</span></a>
+    <a href="NovaVenda.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>Novo orçamento ou venda</span></a>
     <a href="Financeiro.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg><span>Financeiro</span></a>
-    <a href="Integracao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg><span>Contabilidade do cliente</span></a>
+    <a href="Integracao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg><span>O que o cliente vê</span></a>
     <a href="Login.html" style="margin-top:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Sair</span></a>
   </nav>
   <main id="dc-root" style="flex:999 1 560px;min-width:0;padding:22px 28px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px"></main>
 </div>
 </div>
 <template id="dc-tpl">
-    <div style="font-size:12px;color:#5A6B78;font-weight:500">Contabilidade › Naturezas e impostos</div>
+    <div style="font-size:12px;color:#5A6B78;font-weight:500">Escritório › Empresa selecionada › Naturezas e impostos</div>
+    <template data-if="ctxVisivel">
+    <div style="display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;background:#fff;border:1px solid #E4E9EE;border-radius:14px;padding:12px 16px;box-shadow:0 1px 2px rgba(16,35,50,.05)">
+      <div style="display:flex;align-items:center;gap:12px;min-width:0">
+        <span style="flex:none;width:42px;height:42px;border-radius:10px;background:#0B2239;color:#fff;font-weight:800;font-size:14px;display:flex;align-items:center;justify-content:center">{{ctx.sigla}}</span>
+        <div style="min-width:0"><div style="font-size:11px;color:#5A6B78;font-weight:600;letter-spacing:.06em">EMPRESA SELECIONADA</div><div style="font-weight:700;font-size:16px">{{ctx.nome}}</div><div style="font-size:12px;color:#5A6B78">{{ctx.cnpj}} · {{ctx.regime}} · {{ctx.cidade}}/{{ctx.uf}}</div></div>
+      </div>
+      <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+        <label style="flex-direction:row;align-items:center;gap:8px">Trocar empresa<select value="{{ctxId}}" onChange="{{trocar}}" style="max-width:340px"><template data-for="ctxOpcoes" data-as="o"><option value="{{o.id}}">{{o.label}}</option></template></select></label>
+        <a href="EmpresaHome.html" style="font-size:13px;font-weight:600;text-decoration:none;background:#E6F4F1;color:#0A5F52;border-radius:8px;padding:10px 12px">Visão da empresa</a>
+      </div>
+    </div>
+    </template>
 
     <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:center">
       <div>
         <h1 style="margin:0;font-size:26px">Naturezas de operação e impostos</h1>
-        <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">Marcenaria Ipê Ltda · Simples Nacional · o cliente só escolhe a natureza; o sistema preenche CFOP e impostos.</p>
+        <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">{{ctx.nome}} · {{ctx.regime}} · o cliente só escolhe a natureza; o sistema preenche CFOP e impostos.</p>
       </div>
-      <div style="display:flex;gap:10px;flex-wrap:wrap">
-        <button style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:11px 14px;font-weight:600;font-size:13px;min-height:44px">Copiar de outra empresa</button>
-        <button style="background:#0E7C6B;color:#fff;border:1px solid #0E7C6B;border-radius:8px;padding:11px 14px;font-weight:600;font-size:13px;min-height:44px">+ Nova natureza</button>
+      <div style="display:flex;gap:10px;flex-wrap:wrap;align-items:center">
+        <label style="flex-direction:row;align-items:center;gap:8px">Copiar de<select onChange="{{pickOrigem}}"><option value="">Escolha a empresa</option><template data-for="outras" data-as="o"><option value="{{o.id}}">{{o.nome}}</option></template></select></label>
+        <button onClick="{{copiar}}" style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:11px 14px;font-weight:600;font-size:13px;min-height:44px">Copiar naturezas</button>
+        <button onClick="{{novaNat}}" style="background:#0E7C6B;color:#fff;border:1px solid #0E7C6B;border-radius:8px;padding:11px 14px;font-weight:600;font-size:13px;min-height:44px">+ Nova natureza</button>
       </div>
     </div>
+    <template data-if="aviso"><div role="status" style="background:#ECF7F4;border:1px solid #BFE1D9;border-radius:10px;padding:12px 14px;font-size:14px;color:#0A5F52">{{avisoTxt}}</div></template>
+    <template data-if="formAberto">
+      <section style="background:#fff;border:2px solid #0E7C6B;border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:14px">
+        <h2 style="margin:0;font-size:17px">{{formTitulo}}</h2>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+          <label>Nome da natureza<input value="{{fd.nome}}" onChange="{{fi.nome}}" placeholder="Ex.: Venda para outro estado"></label>
+          <label>Tipo<select value="{{fd.tipo}}" onChange="{{fi.tipo}}"><option>Saída · normal</option><option>Saída · devolução</option><option>Saída · remessa</option><option>Entrada · normal</option><option>NFS-e</option></select></label>
+          <label>CFOP dentro do estado<input value="{{fd.cfopIn}}" onChange="{{fi.cfopIn}}" placeholder="5102"></label>
+          <label>CFOP fora do estado<input value="{{fd.cfopOut}}" onChange="{{fi.cfopOut}}" placeholder="6102"></label>
+          <label>Finalidade<select value="{{fd.fin}}" onChange="{{fi.fin}}"><option>Normal</option><option>Devolução</option><option>Complementar</option><option>Ajuste</option></select></label>
+          <label>Gera financeiro<select value="{{fd.fin2}}" onChange="{{fi.fin2}}"><option>Contas a receber</option><option>Contas a pagar</option><option>Abate contas a pagar</option><option>Não gera</option></select></label>
+          <label>ICMS (CST/CSOSN e alíquota)<input value="{{fd.icms}}" onChange="{{fi.icms}}" placeholder="CSOSN 101 · crédito 1,25%"></label>
+          <label>ICMS-ST / DIFAL<input value="{{fd.st}}" onChange="{{fi.st}}" placeholder="—"></label>
+          <label>PIS/COFINS<input value="{{fd.pis}}" onChange="{{fi.pis}}" placeholder="CST 49"></label>
+          <label>IBS/CBS<input value="{{fd.ibs}}" onChange="{{fi.ibs}}" placeholder="cClassTrib 000001"></label>
+        </div>
+        <label>Texto legal que sai na nota<input value="{{fd.texto}}" onChange="{{fi.texto}}"></label>
+        <div style="display:flex;gap:10px;flex-wrap:wrap">
+          <button onClick="{{salvarNat}}" style="background:#0E7C6B;color:#fff;border:1px solid #0E7C6B;border-radius:8px;padding:12px 16px;font-weight:600;font-size:14px;min-height:44px">Salvar natureza</button>
+          <button onClick="{{cancelarNat}}" style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:12px 16px;font-weight:600;font-size:14px;min-height:44px">Cancelar</button>
+        </div>
+      </section>
+    </template>
     <div style="display:flex;flex-wrap:wrap;gap:16px;align-items:flex-start">
       <section style="flex:1 1 260px;max-width:340px;background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:12px;display:flex;flex-direction:column;gap:4px">
         <template data-for="lista" data-as="n">
@@ -75,7 +115,7 @@ h1{letter-spacing:-.02em}
         <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
           <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center">
             <h2 style="margin:0;font-size:18px">{{atual.nome}}</h2>
-            <span style="background:#E6F4F1;color:#0A5F52;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600">{{atual.tipo}}</span>
+            <div style="display:flex;gap:8px;align-items:center"><span style="background:#E6F4F1;color:#0A5F52;padding:4px 10px;border-radius:999px;font-size:12px;font-weight:600">{{atual.tipo}}</span><button onClick="{{editarNat}}" style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:8px 12px;font-weight:600;font-size:13px;min-height:40px">Editar</button></div>
           </div>
           <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;font-size:14px">
             <div style="background:#F8FAFB;border-radius:10px;padding:12px"><div style="font-size:12px;color:#5A6B78">CFOP dentro do estado</div><div style="font-weight:700;font-size:18px;margin-top:4px">{{atual.cfopIn}}</div></div>
@@ -117,9 +157,34 @@ h1{letter-spacing:-.02em}
 <script>
 
 class Component extends DCLogic {
-  constructor(p) { super(p); this.state = { sel: 0, uf: 'MG' }; }
+  db(k, d) { try { const v = localStorage.getItem('vincula_' + k); return v ? JSON.parse(v) : d; } catch (e) { return (DCLogic.__mem && DCLogic.__mem[k]) || d; } }
+  dbSet(k, v) { try { localStorage.setItem('vincula_' + k, JSON.stringify(v)); } catch (e) { DCLogic.__mem = DCLogic.__mem || {}; DCLogic.__mem[k] = v; } }
+  lista() { return this.db('empresas', this.seed()); }
+  seed() { return [
+    { id: 'ipe', nome: 'Marcenaria Ipê Ltda', sigla: 'MI', cnpj: '11.111.111/0001-11', regime: 'Simples Nacional', cidade: 'Pompéu', uf: 'MG', ie: '001.234567.00-11', cnae: '3101-2/00 · Fabricação de móveis', notas: 42, fat: 'R$ 168.400,00', pend: 2, pendTxt: '2 lançamentos', cert: 'Válido até 03/2027', fechado: false },
+    { id: 'silva', nome: 'Silva Instalações Elétricas', sigla: 'SI', cnpj: '22.222.222/0001-22', regime: 'MEI', cidade: 'São Paulo', uf: 'SP', ie: 'Isento', cnae: '4321-5/00 · Instalação elétrica', notas: 9, fat: 'R$ 6.300,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 08/2027', fechado: true },
+    { id: 'boavista', nome: 'Comercial Boa Vista Ltda', sigla: 'BV', cnpj: '33.333.333/0001-33', regime: 'Lucro Presumido', cidade: 'Belo Horizonte', uf: 'MG', ie: '062.998877.00-55', cnae: '4744-0/99 · Materiais de construção', notas: 61, fat: 'R$ 412.900,00', pend: 6, pendTxt: '5 lançamentos', cert: 'Vence em 12 dias', fechado: false },
+    { id: 'ana', nome: 'Ana Souza Arquitetura', sigla: 'AS', cnpj: '44.444.444/0001-44', regime: 'Simples Nacional', cidade: 'Campinas', uf: 'SP', ie: 'Isento', cnae: '7111-1/00 · Serviços de arquitetura', notas: 7, fat: 'R$ 38.500,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 01/2027', fechado: true },
+    { id: 'rioverde', nome: 'Distribuidora Rio Verde S.A.', sigla: 'RV', cnpj: '55.555.555/0001-55', regime: 'Lucro Real', cidade: 'Divinópolis', uf: 'MG', ie: '223.445566.00-77', cnae: '4639-7/01 · Atacado de alimentos', notas: 24, fat: 'R$ 1.284.000,00', pend: 3, pendTxt: '2 lançamentos', cert: 'Válido até 05/2027', fechado: false },
+    { id: 'trigo', nome: 'Padaria Trigo Bom', sigla: 'TB', cnpj: '66.666.666/0001-66', regime: 'Simples Nacional', cidade: 'Pompéu', uf: 'MG', ie: '001.556677.00-22', cnae: '1091-1/02 · Padaria e confeitaria', notas: 5, fat: 'R$ 52.700,00', pend: 1, pendTxt: 'Extrato não enviado', cert: 'Válido até 10/2027', fechado: false },
+    { id: 'rafael', nome: 'Rafael Lima Fotografia', sigla: 'RL', cnpj: '77.777.777/0001-77', regime: 'MEI', cidade: 'Florianópolis', uf: 'SC', ie: 'Isento', cnae: '7420-0/01 · Fotografia', notas: 6, fat: 'R$ 7.800,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 02/2027', fechado: true },
+    { id: 'bompreco', nome: 'Mercado Bom Preço Ltda', sigla: 'BP', cnpj: '88.888.888/0001-88', regime: 'Lucro Presumido', cidade: 'Santos', uf: 'SP', ie: '633.112.233.114', cnae: '4711-3/02 · Supermercado', notas: 412, fat: 'R$ 296.300,00', pend: 3, pendTxt: '3 lançamentos', cert: 'Válido até 06/2027', fechado: false },
+    { id: 'valedosol', nome: 'Agropecuária Vale do Sol S.A.', sigla: 'VS', cnpj: '99.999.999/0001-99', regime: 'Lucro Real', cidade: 'Uberlândia', uf: 'MG', ie: '702.334455.00-88', cnae: '0151-2/01 · Criação de bovinos', notas: 87, fat: 'R$ 2.410.000,00', pend: 1, pendTxt: 'NF-e rejeitada', cert: 'Válido até 09/2027', fechado: false }
+  ]; }
+  empresaId() { if (false) return 'ipe'; if (this.state.__emp) return this.state.__emp; try { return localStorage.getItem('vincula_empresa') || 'ipe'; } catch (e) { return 'ipe'; } }
+  empresa() { const id = this.empresaId(); return this.lista().find((x) => x.id === id) || this.lista()[0]; }
+  selecionar(id) { try { localStorage.setItem('vincula_empresa', id); } catch (e) {} }
+  trocarEmpresa(id) { this.selecionar(id); this.setState({ __emp: id, regime: null }); }
   renderVals() {
-    const nats = [
+    try { localStorage.removeItem('vincula_modo'); } catch (x) {}
+    const e = this.empresa();
+    const v = this._rv();
+    return Object.assign({ ctxVisivel: true, ctx: e, ctxId: e.id, ctxOpcoes: this.lista().map((x) => ({ id: x.id, label: x.nome + ' · ' + x.regime + ' · ' + x.uf })), trocar: (ev) => this.trocarEmpresa(ev.target.value) }, v);
+  }
+
+  constructor(p) { super(p); this.state = { sel: 0, uf: 'MG', ufEscolhida: false, form: null, fd: null, origem: '', aviso: '' }; }
+  _rv() {
+    const seedNats = [
       { nome: 'Venda de mercadoria', tipo: 'Saída · normal', cfopIn: '5102', cfopOut: '6102', fin: 'Normal', fin2: 'Contas a receber', texto: 'Documento emitido por ME ou EPP optante pelo Simples Nacional. Permite o aproveitamento do crédito de ICMS no valor de R$ [valor], alíquota de 1,25%.',
         regras: [['MG (dentro do estado)', 'Todos', 'CSOSN 101 · crédito 1,25%', '—', 'CST 49', 'cClassTrib 000001'], ['Outros estados (contribuinte)', 'Todos', 'CSOSN 101', 'Sem ST', 'CST 49', 'cClassTrib 000001'], ['Outros estados (consumidor final)', 'Todos', 'CSOSN 102', 'DIFAL por UF + FCP', 'CST 49', 'cClassTrib 000001']] },
       { nome: 'Venda com ST', tipo: 'Saída · normal', cfopIn: '5405', cfopOut: '6404', fin: 'Normal', fin2: 'Contas a receber', texto: 'ICMS retido anteriormente por substituição tributária.',
@@ -133,19 +198,61 @@ class Component extends DCLogic {
       { nome: 'Entrada de mercadoria', tipo: 'Entrada · normal', cfopIn: '1102', cfopOut: '2102', fin: 'Normal', fin2: 'Contas a pagar', texto: 'Entrada pelo XML do fornecedor, com estoque atualizado.',
         regras: [['Todos', 'Todos', 'Conforme XML', 'Conforme XML', 'CST 98', 'Conforme XML']] }
     ];
-    const sel = this.state.sel;
+    const emp0 = this.empresa();
+    const chave = 'nat_' + emp0.id;
+    const nats = this.db(chave, seedNats);
+    const sel = Math.min(this.state.sel, nats.length - 1);
     const lista = nats.map((n, i) => ({ ...n, pick: () => this.setState({ sel: i }), style: 'display:flex;flex-direction:column;align-items:flex-start;gap:2px;text-align:left;border:0;border-radius:10px;padding:10px 12px;min-height:44px;' + (i === sel ? 'background:#0B2239;color:#fff' : 'background:transparent;color:#14212B') }));
-    const uf = this.state.uf;
-    const ufs = ['MG', 'SP', 'BA'].map((u) => ({ uf: u, pick: () => this.setState({ uf: u }), style: 'border-radius:999px;padding:8px 16px;font-weight:600;font-size:13px;min-height:40px;' + (u === uf ? 'background:#0B2239;color:#fff;border:1px solid #0B2239' : 'background:#fff;color:#14212B;border:1px solid #CBD4DB') }));
+    const emp = this.empresa();
+    const simples = emp.regime === 'Simples Nacional' || emp.regime === 'MEI';
+    const pis = emp.regime === 'Lucro Real' ? 'CST 01 · 1,65% / 7,6%' : (emp.regime === 'Lucro Presumido' ? 'CST 01 · 0,65% / 3%' : 'CST 49');
+    const aliq = emp.uf === 'SC' ? '17%' : '18%';
+    const conv = (s) => simples ? s.replace('MG (dentro do estado)', emp.uf + ' (dentro do estado)').replace('Pompéu/MG', emp.cidade + '/' + emp.uf).replace('CSOSN 101 · crédito 1,25%', emp.regime === 'MEI' ? 'CSOSN 102 · sem crédito' : 'CSOSN 101 · crédito 1,25%')
+      : s.replace('MG (dentro do estado)', emp.uf + ' (dentro do estado)').replace('Pompéu/MG', emp.cidade + '/' + emp.uf).replace('CSOSN 101 · crédito 1,25%', 'CST 00 · ICMS ' + aliq).replace('CSOSN 101', 'CST 00 · ICMS 12%').replace('CSOSN 102', 'CST 00 · ICMS 12%').replace('CSOSN 500', 'CST 60').replace('CSOSN 201', 'CST 10').replace('CSOSN 400', 'CST 41').replace('CST 49', pis).replace('No DAS', 'Fora do DAS');
+    const uf = this.state.uf === 'MG' && emp.uf !== 'MG' && !this.state.ufEscolhida ? emp.uf : this.state.uf;
+    const ufs = [emp.uf].concat(['SP', 'MG', 'SC', 'BA'].filter((x) => x !== emp.uf)).slice(0, 3).map((u) => ({ uf: u, pick: () => this.setState({ uf: u, ufEscolhida: true }), style: 'border-radius:999px;padding:8px 16px;font-weight:600;font-size:13px;min-height:40px;' + (u === uf ? 'background:#0B2239;color:#fff;border:1px solid #0B2239' : 'background:#fff;color:#14212B;border:1px solid #CBD4DB') }));
     const a = nats[sel];
-    const dentro = uf === 'MG';
-    const sim = { cfop: dentro ? a.cfopIn : a.cfopOut, icms: a.regras[dentro ? 0 : Math.min(1, a.regras.length - 1)][2].split(' · ')[0], difal: (!dentro && sel === 0) ? 'Calculado para ' + uf : 'Não se aplica' };
-    const atual = Object.assign({}, a, { regras: a.regras.map((r) => ({ d: r[0], n: r[1], i: r[2], s: r[3], p: r[4], b: r[5] })) });
-    return { lista, atual, ufs, sim };
+    const dentro = uf === emp.uf;
+    const sim = { cfop: dentro ? a.cfopIn : a.cfopOut, icms: conv(a.regras[dentro ? 0 : Math.min(1, a.regras.length - 1)][2]).split(' · ')[0], difal: (!dentro && sel === 0) ? 'Calculado para ' + uf : 'Não se aplica' };
+    const atual = Object.assign({}, a, { texto: simples ? a.texto : a.texto.replace('Documento emitido por ME ou EPP optante pelo Simples Nacional. Permite o aproveitamento do crédito de ICMS no valor de R$ [valor], alíquota de 1,25%.', 'Valor aproximado dos tributos conforme Lei 12.741/2012 (IBPT).'), regras: a.regras.map((r) => ({ d: conv(r[0]), n: r[1], i: conv(r[2]), s: conv(r[3]), p: conv(r[4]), b: r[5] })) });
+    const vazio = { nome: '', tipo: 'Saída · normal', cfopIn: '', cfopOut: '', fin: 'Normal', fin2: 'Contas a receber', icms: '', st: '—', pis: '', ibs: 'cClassTrib 000001', texto: '' };
+    const fd = this.state.fd || vazio;
+    const fi = {};
+    Object.keys(vazio).forEach((k) => { fi[k] = (ev) => this.setState({ fd: Object.assign({}, this.state.fd || vazio, { [k]: ev.target.value }) }); });
+    const outras = this.lista().filter((x) => x.id !== emp0.id).map((x) => ({ id: x.id, nome: x.nome + ' · ' + x.regime }));
+    return {
+      lista, atual, ufs, sim, fd, fi, outras,
+      formAberto: this.state.form !== null, formTitulo: this.state.form === 'novo' ? 'Nova natureza de operação' : 'Editar natureza de operação',
+      aviso: !!this.state.aviso, avisoTxt: this.state.aviso,
+      novaNat: () => this.setState({ form: 'novo', fd: vazio, aviso: '' }),
+      editarNat: () => { const n = nats[sel]; const r = n.regras[0]; this.setState({ form: sel, aviso: '', fd: { nome: n.nome, tipo: n.tipo, cfopIn: n.cfopIn, cfopOut: n.cfopOut, fin: n.fin, fin2: n.fin2, icms: r[2], st: r[3], pis: r[4], ibs: r[5], texto: n.texto } }); },
+      cancelarNat: () => this.setState({ form: null, fd: null }),
+      salvarNat: () => {
+        const d = this.state.fd || vazio;
+        if (!d.nome) { this.setState({ aviso: 'Dê um nome para a natureza antes de salvar.' }); return; }
+        const l = nats.map((x) => Object.assign({}, x, { regras: x.regras.map((r) => r.slice()) }));
+        const regra = [emp0.uf + ' (dentro do estado)', 'Todos', d.icms || '—', d.st || '—', d.pis || '—', d.ibs || '—'];
+        let idx = this.state.form;
+        if (idx === 'novo') { l.push({ nome: d.nome, tipo: d.tipo, cfopIn: d.cfopIn || '—', cfopOut: d.cfopOut || '—', fin: d.fin, fin2: d.fin2, texto: d.texto || '—', regras: [regra] }); idx = l.length - 1; }
+        else { const n = l[idx]; Object.assign(n, { nome: d.nome, tipo: d.tipo, cfopIn: d.cfopIn, cfopOut: d.cfopOut, fin: d.fin, fin2: d.fin2, texto: d.texto }); n.regras[0] = [n.regras[0][0], n.regras[0][1], d.icms, d.st, d.pis, d.ibs]; }
+        this.dbSet(chave, l);
+        this.setState({ form: null, fd: null, sel: idx, aviso: 'Natureza salva para ' + emp0.nome + '.' });
+      },
+      pickOrigem: (ev) => this.setState({ origem: ev.target.value }),
+      copiar: () => {
+        const o = this.state.origem; if (!o) { this.setState({ aviso: 'Escolha de qual empresa copiar.' }); return; }
+        const src = this.db('nat_' + o, seedNats);
+        const nomes = nats.map((x) => x.nome);
+        const novas = src.filter((x) => nomes.indexOf(x.nome) < 0);
+        this.dbSet(chave, nats.concat(novas));
+        this.setState({ aviso: novas.length ? novas.length + ' natureza(s) copiada(s).' : 'Esta empresa já tem todas as naturezas da origem.' });
+      }
+    };
   }
 }
 
 DC.start(Component);
 </script>
+<script src="branding.js"></script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 /* Mini runtime do protótipo Vincula (versão independente) */
 class DCLogic {
   constructor(p) { this.props = p || {}; this.state = {}; }
-  setState(s) { Object.assign(this.state, typeof s === 'function' ? s(this.state) : s); DC.render(); }
+  setState(s) { Object.assign(this.state, typeof s === 'function' ? s(this.state) : s); if (!DC.silent) DC.render(); }
   forceUpdate() { DC.render(); }
 }
 const DC = {
@@ -40,7 +40,11 @@ const DC = {
       if (/^on/i.test(a.name)) {
         const fn = this.get(ctx, this.holeOnly(a.value));
         n.removeAttribute(a.name);
-        if (typeof fn === 'function') n.addEventListener(a.name.slice(2).toLowerCase(), fn);
+        const ev = a.name.slice(2).toLowerCase();
+        if (typeof fn !== 'function') continue;
+        if (ev === 'change' && n.tagName === 'INPUT' && n.type !== 'checkbox' && n.type !== 'radio') {
+          n.addEventListener('input', fn);
+        } else n.addEventListener(ev, fn);
         continue;
       }
       const v = this.interp(a.value, ctx);
@@ -48,13 +52,29 @@ const DC = {
       if (a.name === 'value' && 'value' in n) n.value = v;
     }
     this.walk(n, ctx);
+    if (n.tagName === 'SELECT' && n.hasAttribute('value')) n.value = n.getAttribute('value');
   },
   render() {
     const root = document.getElementById('dc-root');
     if (!root || !this.comp) return;
+    const act = document.activeElement;
+    let path = null, s0 = null, s1 = null;
+    if (act && act !== root && root.contains(act)) {
+      path = []; let n = act;
+      while (n && n !== root) { path.unshift(Array.prototype.indexOf.call(n.parentNode.childNodes, n)); n = n.parentNode; }
+      try { s0 = act.selectionStart; s1 = act.selectionEnd; } catch (x) {}
+    }
     const part = document.getElementById('dc-tpl').content.cloneNode(true);
     this.walk(part, this.comp.renderVals());
     root.replaceChildren(part);
+    if (path) {
+      let n = root;
+      for (const i of path) { n = n && n.childNodes[i]; }
+      if (n && n.focus && (n.tagName === 'INPUT' || n.tagName === 'TEXTAREA' || n.tagName === 'SELECT')) {
+        n.focus();
+        try { if (s0 != null) n.setSelectionRange(s0, s1); } catch (x) {}
+      }
+    }
   },
   start(C) { this.comp = new C({}); this.render(); }
 };
