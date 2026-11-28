@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Configurações · Vincula (protótipo)</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0;font-family:Inter,system-ui,sans-serif;background:#F3F6F9;color:#14212B}
+a{color:#0E7C6B}a:hover{color:#0A5F52}
+.nav a{display:flex;align-items:center;gap:10px;padding:9px 12px;border-radius:9px;color:#C5D3DD;text-decoration:none;font-size:14px;font-weight:500}
+.nav a:hover{background:#13304B;color:#fff}
+.nav a.on{background:#0E7C6B;color:#fff}
+button{font-family:inherit;cursor:pointer}
+label{display:flex;flex-direction:column;gap:6px;font-size:13px;color:#3D4D59;font-weight:500}
+input,select{font-family:inherit;font-size:14px;padding:10px 12px;border:1px solid #CBD4DB;border-radius:8px;background:#fff;color:#14212B;min-height:42px;box-sizing:border-box}
+th{font-weight:600;font-size:11px;color:#5A6B78;text-align:left;padding:10px 12px;border-bottom:1px solid #E4E9EE;background:#F8FAFB;text-transform:uppercase;letter-spacing:.05em}
+td{font-size:14px;padding:12px;border-bottom:1px solid #EEF1F4}
+tbody tr:hover{background:#F7FBFA}
+h1{letter-spacing:-.02em}
+</style>
+
+</head>
+<body>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#fff;border-bottom:1px solid #E4E9EE;display:flex;flex-wrap:wrap;align-items:center;gap:14px;padding:10px 20px;box-sizing:border-box">
+    <a href="ClienteInicio.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#0B2239"><span style="width:34px;height:34px;border-radius:9px;background:#0E7C6B;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg></span><span style="font-weight:800;font-size:19px;letter-spacing:-.03em">Vincula</span><span style="font-size:11px;font-weight:700;color:#0A5F52;background:#E6F4F1;border-radius:6px;padding:2px 6px">ERP</span></a>
+    <div style="display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:8px 12px;font-size:13px;font-weight:600;color:#14212B;min-height:40px;box-sizing:border-box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 7h2M13 7h2M9 11h2M13 11h2M9 15h2M13 15h2"/></svg><span >Marcenaria Ipê Ltda</span></div>
+    <div style="flex:1 1 220px;max-width:460px;display:flex;align-items:center;gap:8px;background:#F3F6F9;border:1px solid #E4E9EE;border-radius:9px;padding:0 12px;min-height:40px"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#5A6B78" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg><input aria-label="Buscar" placeholder="Buscar empresa, nota, cliente, produto…" style="border:0;background:transparent;min-height:38px;padding:0;flex:1;min-width:0;outline:none"></div>
+    <div style="margin-left:auto;display:flex;align-items:center;gap:14px">
+      <button aria-label="Notificações" style="position:relative;width:40px;height:40px;border-radius:9px;border:1px solid #E4E9EE;background:#fff;display:flex;align-items:center;justify-content:center"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3D4D59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16v-5a6 6 0 0 1 12 0v5l2 2H4z"/><path d="M10 21h4"/></svg><span style="position:absolute;top:6px;right:7px;width:8px;height:8px;border-radius:50%;background:#D97706"></span></button>
+      <a href="ClienteIntegracao.html" title="Minha contabilidade" style="display:flex;align-items:center;gap:10px;text-decoration:none;color:#14212B"><span  style="width:36px;height:36px;border-radius:50%;background:#0B2239;color:#fff;font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center">CM</span><span style="display:flex;flex-direction:column;line-height:1.2"><span  style="font-size:13px;font-weight:600">Carlos Mendes</span><span style="font-size:12px;color:#5A6B78">Marcenaria Ipê Ltda</span></span></a>
+    </div>
+  </header>
+<div style="display:flex;flex-wrap:wrap;flex:1">
+  <nav class="nav" style="flex:1 1 220px;max-width:248px;background:#0B2239;padding:18px 12px;box-sizing:border-box;display:flex;flex-direction:column;gap:3px">
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">MARCENARIA IPÊ LTDA</div>
+    <a href="ClienteInicio.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span>Início</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">VENDAS</div>
+    <a href="ClienteNovaVenda.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg><span>Novo orçamento ou venda</span></a>
+    <a href="ClientePDV.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M7 20h10M12 16v4M7 9h4"/></svg><span>PDV / caixa</span></a>
+    <a href="ClienteNotas.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/></svg><span>Notas fiscais</span></a>
+    <a href="ClienteVenda.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h2l2 12h11l2-8H7"/><circle cx="9" cy="20" r="1.5"/><circle cx="17" cy="20" r="1.5"/></svg><span>Passo a passo da venda</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">CADASTROS E ESTOQUE</div>
+    <a href="ClienteCadastros.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></svg><span>Cadastros</span></a>
+    <a href="ClienteEstoque.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7l9-4 9 4v10l-9 4-9-4z"/><path d="M3 7l9 4 9-4M12 11v10"/></svg><span>Estoque</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">FINANÇAS</div>
+    <a href="ClienteFinanceiro.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6" width="18" height="13" rx="2"/><path d="M16 12.5h2M3 10h18"/></svg><span>Financeiro</span></a>
+    <a href="ClienteRelatorios.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg><span>Relatórios</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">CONTABILIDADE</div>
+    <a href="ClienteIntegracao.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 14a4 4 0 0 0 5.6 0l3-3a4 4 0 0 0-5.6-5.6l-1 1"/><path d="M14 10a4 4 0 0 0-5.6 0l-3 3a4 4 0 0 0 5.6 5.6l1-1"/></svg><span>Minha contabilidade</span><span style="margin-left:auto;background:#D97706;color:#fff;font-size:11px;font-weight:700;border-radius:99px;padding:1px 7px">1</span></a>
+    <div style="font-size:11px;color:#7F97A6;padding:14px 12px 6px;letter-spacing:.08em;font-weight:600">SISTEMA</div>
+    <a class="on" href="ClienteConfiguracoes.html"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1"/></svg><span>Configurações</span></a>
+    <a href="LoginCliente.html" style="margin-top:18px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h4v16h-4M10 8l-4 4 4 4M6 12h11"/></svg><span>Sair</span></a>
+  </nav>
+  <main id="dc-root" style="flex:999 1 560px;min-width:0;padding:22px 28px 40px;box-sizing:border-box;display:flex;flex-direction:column;gap:20px"></main>
+</div>
+</div>
+<template id="dc-tpl">
+    <div style="font-size:12px;color:#5A6B78;font-weight:500">Sistema › Configurações</div>
+
+    <div>
+      <h1 style="margin:0;font-size:26px">Configurações</h1>
+      <p style="margin:6px 0 0;color:#5A6B78;font-size:14px">{{empresaTxt}}</p>
+    </div>
+    <template data-if="temMsg">
+      <div role="status" style="display:flex;gap:12px;align-items:center;justify-content:space-between;background:#E6F4F1;border:1px solid #BFE1D9;color:#0A5F52;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:600">
+        <span>{{msg}}</span>
+        <button onClick="{{fecharMsg}}" style="background:transparent;border:0;color:#0A5F52;font-weight:700;font-size:13px;min-height:32px">Fechar</button>
+      </div>
+    </template>
+    <template data-if="temAviso"><div style="background:#FFF3E0;border:1px solid #F5D9A8;color:#7A3E06;border-radius:10px;padding:12px 16px;font-size:14px;font-weight:600">{{aviso}}</div></template>
+
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center">
+        <h2 style="margin:0;font-size:17px">Certificado digital A1</h2>
+        <span style="{{certStyle}}">{{certSelo}}</span>
+      </div>
+      <template data-if="temCert">
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;background:#F8FAFB;border:1px solid #E4E9EE;border-radius:10px;padding:14px;font-size:14px">
+          <div><div style="font-size:12px;color:#5A6B78">Titular</div><div style="font-weight:700">{{certNome}}</div></div>
+          <div><div style="font-size:12px;color:#5A6B78">CNPJ / CPF</div><div style="font-weight:700">{{certDoc}}</div></div>
+          <div><div style="font-size:12px;color:#5A6B78">Validade</div><div style="font-weight:700">{{certVal}}</div></div>
+          <div><div style="font-size:12px;color:#5A6B78">Autoridade certificadora</div><div style="font-weight:700">{{certEmissor}}</div></div>
+          <div style="grid-column:1 / -1;display:flex;flex-wrap:wrap;gap:10px;align-items:center;justify-content:space-between"><span style="font-size:12px;color:#5A6B78">{{certOrigem}} · {{certArq}}</span>
+            <button onClick="{{removerCert}}" style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:8px 12px;font-weight:600;font-size:13px;min-height:36px">Remover certificado</button></div>
+        </div>
+      </template>
+      <template data-if="semCert"><p style="margin:0;font-size:14px;color:#B42318;font-weight:600">Nenhum certificado configurado. Sem ele não é possível emitir notas.</p></template>
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <strong style="font-size:15px">Enviar novo certificado</strong>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;align-items:center">
+          <span style="position:relative;display:inline-flex;align-items:center;background:#0B2239;color:#fff;border-radius:8px;padding:11px 16px;font-weight:600;font-size:14px;min-height:44px;box-sizing:border-box">Escolher arquivo .pfx<input type="file" accept=".pfx,.p12" onChange="{{lerArquivo}}" aria-label="Escolher certificado A1" style="position:absolute;inset:0;opacity:0;cursor:pointer;min-height:0"></span>
+          <span style="font-weight:600;font-size:14px">{{arqNome}}</span>
+        </div>
+        <label style="max-width:360px">Senha do certificado<input type="password" value="{{senha}}" onChange="{{setSenha}}" autocomplete="off" aria-label="Senha do certificado"></label>
+        <template data-if="temErro"><div role="alert" style="font-size:13px;color:#B42318;font-weight:700">{{erro}}</div></template>
+        <button onClick="{{validar}}" style="align-self:flex-start;background:#0E7C6B;color:#fff;border:1px solid #0E7C6B;border-radius:8px;padding:12px 16px;font-weight:700;font-size:14px;min-height:44px">{{botaoValidar}}</button>
+      </div>
+      <div style="background:#F3F6F9;border-radius:10px;padding:14px;font-size:13px;color:#3D4D59;line-height:1.5">
+        <strong>Segurança neste protótipo:</strong> o certificado e a senha são lidos só aqui, no seu navegador, para conferir titular, CNPJ e validade. <strong>Nada é enviado pela internet</strong>, e a senha e o arquivo <strong>não ficam guardados</strong>; só os dados de identificação do certificado ficam salvos. Na versão com servidor, o certificado vai para o servidor criptografado e só é usado para assinar as notas.
+      </div>
+    </section>
+
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-direction:column;gap:16px">
+      <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center">
+        <h2 style="margin:0;font-size:17px">Emissão de notas</h2>
+        <span style="display:inline-block;padding:6px 12px;border-radius:999px;font-weight:700;font-size:12px;background:#FFF3E0;color:#7A3E06">Ambiente: homologação (testes) · produção bloqueada</span>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px">
+        <label>NFC-e: ID do CSC<input value="{{cscId}}" onChange="{{setCscId}}" placeholder="000001"></label>
+        <label>NFC-e: código CSC<input value="{{cscTok}}" onChange="{{setCscTok}}" placeholder="Gerado no portal da SEFAZ"></label>
+        <label>Série da NF-e<input value="{{serieNFe}}" onChange="{{setSerieNFe}}" inputmode="numeric"></label>
+        <label>Série da NFC-e<input value="{{serieNFCe}}" onChange="{{setSerieNFCe}}" inputmode="numeric"></label>
+        <label>Inscrição municipal (NFS-e)<input value="{{im}}" onChange="{{setIm}}"></label>
+        <label>Alíquota de ISS (%)<input value="{{iss}}" onChange="{{setIss}}" inputmode="decimal"></label>
+      </div>
+      <button onClick="{{salvarCfg}}" style="align-self:flex-start;background:#0B2239;color:#fff;border:1px solid #0B2239;border-radius:8px;padding:12px 16px;font-weight:700;font-size:14px;min-height:44px">Salvar emissão</button>
+      <p style="margin:0;font-size:13px;color:#5A6B78">Enquanto estivermos em testes, tudo sai em homologação: notas sem valor fiscal. A produção só será liberada depois dos testes, com o servidor.</p>
+    </section>
+
+    <section style="background:#fff;border:1px solid #E4E9EE;border-radius:14px;box-shadow:0 1px 2px rgba(16,35,50,.05),0 6px 20px rgba(16,35,50,.05);padding:20px;display:flex;flex-wrap:wrap;gap:12px;align-items:center">
+      <div style="flex:1 1 320px"><div style="font-weight:700">Dados de demonstração</div><div style="font-size:13px;color:#5A6B78">Apaga vendas, notas, estoque, cadastros e configurações criados nesta empresa neste navegador.</div></div>
+      <button onClick="{{pedirRestaurar}}" style="background:#fff;border:1px solid #B42318;color:#B42318;border-radius:8px;padding:10px 14px;font-weight:700;font-size:14px;min-height:42px">Restaurar dados de demonstração</button>
+      <template data-if="restaurarAberto">
+        <div style="flex-basis:100%;display:flex;flex-wrap:wrap;gap:10px;align-items:center"><span style="font-weight:700;color:#B42318">Confirma?</span>
+          <button onClick="{{restaurar}}" style="background:#B42318;color:#fff;border:1px solid #B42318;border-radius:8px;padding:8px 12px;font-weight:700;font-size:13px;min-height:38px">Sim, restaurar</button>
+          <button onClick="{{naoRestaurar}}" style="background:#fff;border:1px solid #CBD4DB;border-radius:8px;padding:8px 12px;font-weight:600;font-size:13px;min-height:38px">Não</button></div>
+      </template>
+    </section>
+
+</template>
+<script src="runtime.js"></script>
+<script>
+
+class Component extends DCLogic {
+  db(k, d) { try { const v = localStorage.getItem('vincula_' + k); return v ? JSON.parse(v) : d; } catch (e) { return (DCLogic.__mem && DCLogic.__mem[k]) || d; } }
+  dbSet(k, v) { try { localStorage.setItem('vincula_' + k, JSON.stringify(v)); } catch (e) { DCLogic.__mem = DCLogic.__mem || {}; DCLogic.__mem[k] = v; } }
+  lista() { const base = this.seed(); const salvas = this.db('empresas', base); const ids = salvas.map((x) => x.id); return salvas.concat(base.filter((x) => ids.indexOf(x.id) < 0)); }
+  seed() { return [
+    { id: 'ipe', nome: 'Marcenaria Ipê Ltda', sigla: 'MI', cnpj: '11.111.111/0001-11', regime: 'Simples Nacional', cidade: 'Pompéu', uf: 'MG', ie: '001.234567.00-11', cnae: '3101-2/00 · Fabricação de móveis', notas: 42, fat: 'R$ 168.400,00', pend: 2, pendTxt: '2 lançamentos', cert: 'Válido até 03/2027', fechado: false },
+    { id: 'silva', nome: 'Silva Instalações Elétricas', sigla: 'SI', cnpj: '22.222.222/0001-22', regime: 'MEI', cidade: 'São Paulo', uf: 'SP', ie: 'Isento', cnae: '4321-5/00 · Instalação elétrica', notas: 9, fat: 'R$ 6.300,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 08/2027', fechado: true },
+    { id: 'boavista', nome: 'Comercial Boa Vista Ltda', sigla: 'BV', cnpj: '33.333.333/0001-33', regime: 'Lucro Presumido', cidade: 'Belo Horizonte', uf: 'MG', ie: '062.998877.00-55', cnae: '4744-0/99 · Materiais de construção', notas: 61, fat: 'R$ 412.900,00', pend: 6, pendTxt: '5 lançamentos', cert: 'Vence em 12 dias', fechado: false },
+    { id: 'ana', nome: 'Ana Souza Arquitetura', sigla: 'AS', cnpj: '44.444.444/0001-44', regime: 'Simples Nacional', cidade: 'Campinas', uf: 'SP', ie: 'Isento', cnae: '7111-1/00 · Serviços de arquitetura', notas: 7, fat: 'R$ 38.500,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 01/2027', fechado: true },
+    { id: 'rioverde', nome: 'Distribuidora Rio Verde S.A.', sigla: 'RV', cnpj: '55.555.555/0001-55', regime: 'Lucro Real', cidade: 'Divinópolis', uf: 'MG', ie: '223.445566.00-77', cnae: '4639-7/01 · Atacado de alimentos', notas: 24, fat: 'R$ 1.284.000,00', pend: 3, pendTxt: '2 lançamentos', cert: 'Válido até 05/2027', fechado: false },
+    { id: 'trigo', nome: 'Padaria Trigo Bom', sigla: 'TB', cnpj: '66.666.666/0001-66', regime: 'Simples Nacional', cidade: 'Pompéu', uf: 'MG', ie: '001.556677.00-22', cnae: '1091-1/02 · Padaria e confeitaria', notas: 5, fat: 'R$ 52.700,00', pend: 1, pendTxt: 'Extrato não enviado', cert: 'Válido até 10/2027', fechado: false },
+    { id: 'rafael', nome: 'Rafael Lima Fotografia', sigla: 'RL', cnpj: '77.777.777/0001-77', regime: 'MEI', cidade: 'Florianópolis', uf: 'SC', ie: 'Isento', cnae: '7420-0/01 · Fotografia', notas: 6, fat: 'R$ 7.800,00', pend: 0, pendTxt: 'Nenhuma', cert: 'Válido até 02/2027', fechado: true },
+    { id: 'bompreco', nome: 'Mercado Bom Preço Ltda', sigla: 'BP', cnpj: '88.888.888/0001-88', regime: 'Lucro Presumido', cidade: 'Santos', uf: 'SP', ie: '633.112.233.114', cnae: '4711-3/02 · Supermercado', notas: 412, fat: 'R$ 296.300,00', pend: 3, pendTxt: '3 lançamentos', cert: 'Válido até 06/2027', fechado: false },
+    { id: 'ondaazul', nome: 'Pousada Onda Azul Ltda', sigla: 'OA', cnpj: '12.121.212/0001-12', regime: 'Simples Nacional', cidade: 'Balneário Camboriú', uf: 'SC', ie: '257.123.456', cnae: '5510-8/01 · Hotéis e pousadas', notas: 38, fat: 'R$ 94.600,00', pend: 2, pendTxt: '2 lançamentos', cert: 'Válido até 04/2027', fechado: false },
+    { id: 'textilvale', nome: 'Têxtil Vale Norte Ltda', sigla: 'TV', cnpj: '13.131.313/0001-13', regime: 'Lucro Presumido', cidade: 'Blumenau', uf: 'SC', ie: '258.654.321', cnae: '1412-6/01 · Confecção de roupas', notas: 73, fat: 'R$ 538.200,00', pend: 4, pendTxt: '3 lançamentos', cert: 'Vence em 20 dias', fechado: false },
+    { id: 'valedosol', nome: 'Agropecuária Vale do Sol S.A.', sigla: 'VS', cnpj: '99.999.999/0001-99', regime: 'Lucro Real', cidade: 'Uberlândia', uf: 'MG', ie: '702.334455.00-88', cnae: '0151-2/01 · Criação de bovinos', notas: 87, fat: 'R$ 2.410.000,00', pend: 1, pendTxt: 'NF-e rejeitada', cert: 'Válido até 09/2027', fechado: false }
+  ]; }
+  prodSeed() { return [
+    { id: 'mesa', tipo: 'Produto', cod: 'MI-001', nome: 'Mesa de jantar em ipê 1,80 m', unid: 'UN', ncm: '9403.60.00', cest: '', preco: 1800, custo: 950, ini: 3, min: 2, ctrl: true },
+    { id: 'cad', tipo: 'Produto', cod: 'MI-002', nome: 'Cadeira estofada em ipê', unid: 'UN', ncm: '9401.61.00', cest: '', preco: 320, custo: 160, ini: 18, min: 12, ctrl: true },
+    { id: 'arm', tipo: 'Produto', cod: 'MI-003', nome: 'Armário planejado (m²)', unid: 'M2', ncm: '9403.30.00', cest: '', preco: 950, custo: 520, ini: 0, min: 0, ctrl: false },
+    { id: 'tabua', tipo: 'Produto', cod: 'MP-010', nome: 'Tábua de ipê 3 m', unid: 'UN', ncm: '4407.29.90', cest: '', preco: 145, custo: 98, ini: 40, min: 50, ctrl: true },
+    { id: 'verniz', tipo: 'Produto', cod: 'MP-020', nome: 'Verniz marítimo 3,6 L', unid: 'UN', ncm: '3208.90.10', cest: '', preco: 189, custo: 129, ini: 6, min: 4, ctrl: true },
+    { id: 'mont', tipo: 'Serviço', cod: 'SV-001', nome: 'Montagem no local', unid: 'SV', lc116: '14.06', preco: 250, custo: 0 },
+    { id: 'frete', tipo: 'Serviço', cod: 'SV-002', nome: 'Frete fora de Pompéu', unid: 'SV', lc116: '16.02', preco: 120, custo: 0 }
+  ]; }
+  produtos() { return this.db('produtos_' + this.empresaId(), this.prodSeed()); }
+  clientesSeed() { return [{ nome: 'Carlos Mendes', doc: 'CPF 000.000.000-00', cidade: 'Pompéu/MG', fone: '(37) 99999-0001', email: 'carlos@exemplo.com' }, { nome: 'Loja Casa Bela Ltda', doc: 'CNPJ 12.345.678/0001-00', cidade: 'Pompéu/MG', fone: '(37) 3523-0000', email: 'compras@casabela.exemplo' }]; }
+  clientes() { return this.db('clientes_' + this.empresaId(), this.clientesSeed()); }
+  fornSeed() { return [
+    { nome: 'Madeireira Sul Ltda', doc: 'CNPJ 21.000.000/0001-10', cidade: 'Divinópolis/MG', fone: '(37) 3222-0000', email: 'vendas@madeireirasul.exemplo' },
+    { nome: 'Tintas Minas Comércio', doc: 'CNPJ 22.000.000/0001-20', cidade: 'Belo Horizonte/MG', fone: '(31) 3333-0000', email: 'pedidos@tintasminas.exemplo' },
+    { nome: 'Cemig', doc: 'CNPJ 06.981.180/0001-16', cidade: 'Belo Horizonte/MG', fone: '116', email: '' },
+    { nome: 'Imobiliária Centro', doc: 'CNPJ 23.000.000/0001-30', cidade: 'Pompéu/MG', fone: '(37) 3523-1111', email: 'aluguel@imobcentro.exemplo' }
+  ]; }
+  fornecedores() { return this.db('fornecedores_' + this.empresaId(), this.fornSeed()); }
+  movs() { return this.db('estoque_' + this.empresaId(), []); }
+  saldo(p, ms) { return (p.ini || 0) + (ms || this.movs()).filter((m) => m.prod === p.id).reduce((a, m) => a + m.q, 0); }
+  addMovs(lista) { this.dbSet('estoque_' + this.empresaId(), lista.concat(this.movs())); }
+  fiscalSeed() { return { ambiente: 'Homologação', cert: { arquivo: 'certificado-a1-empresa.pfx', titular: '', validade: '15/03/2027' }, csc: { id: '000001', token: 'CSC-DEMONSTRACAO' }, serieNFe: 1, serieNFCe: 1, serieCTe: 1, serieMDFe: 1, im: '12345', aliqISS: 3 }; }
+  fiscal() { return Object.assign(this.fiscalSeed(), this.db('fiscal_' + this.empresaId(), {})); }
+  notasSeed() {
+    const e = this.empresa();
+    const it1 = [{ id: 'mesa', nome: 'Mesa de jantar em ipê 1,80 m', qtd: 1, preco: 1800 }, { id: 'cad', nome: 'Cadeira estofada em ipê', qtd: 6, preco: 320 }];
+    const n1 = this.montarNota({ modelo: 'NF-e', numero: 1043, data: '27/11/2026', hora: '10:12', origem: 'Pedido nº 1043', dest: { nome: 'Carlos Mendes', doc: 'CPF 000.000.000-00', cidade: 'Pompéu/MG' }, itens: it1, desconto: 5 });
+    const n2 = this.montarNota({ modelo: 'NFS-e', numero: 88, data: '15/11/2026', hora: '16:40', origem: 'Montagem Loja Casa Bela', dest: { nome: 'Loja Casa Bela Ltda', doc: 'CNPJ 12.345.678/0001-00', cidade: 'Pompéu/MG' }, itens: [{ id: 'mont', nome: 'Montagem no local', qtd: 1, preco: 650 }] });
+    const n3 = this.montarNota({ modelo: 'NFC-e', numero: 312, data: '26/11/2026', hora: '11:05', origem: 'Venda no PDV', dest: { nome: 'Consumidor final', doc: '', cidade: '' }, itens: [{ id: 'verniz', nome: 'Verniz marítimo 3,6 L', qtd: 1, preco: 189 }], forma: 'Pix' });
+    return [n1, n2, n3].map((n) => Object.assign(n, { status: 'Autorizada', antiga: true }));
+  }
+  notas() { return this.db('notas_' + this.empresaId(), this.notasSeed()); }
+  ufDe(cidade) { const m = String(cidade || '').match(/\/([A-Z]{2})\s*$/); return m ? m[1] : ''; }
+  calcNota(modelo, itens, destUF, desconto) {
+    const e = this.empresa(); const reg = e.regime; const simples = reg === 'Simples Nacional'; const mei = reg === 'MEI';
+    const r2 = (n) => Math.round(n * 100) / 100;
+    const prods = this.produtos(); const fz = this.fiscal();
+    const ali = e.uf === 'SC' ? 0.17 : 0.18;
+    const inter = destUF && destUF !== e.uf;
+    const fat = 1 - (Number(desconto) || 0) / 100;
+    let t = { bruto: 0, desc: 0, total: 0, icms: 0, pis: 0, cofins: 0, iss: 0, ibs: 0, cbs: 0 };
+    const linhas = itens.map((i) => {
+      const p = prods.find((x) => x.id === i.id) || {};
+      const bruto = r2(i.qtd * i.preco); const vl = r2(bruto * fat);
+      t.bruto += bruto; t.total += vl;
+      const L = { nome: i.nome, qtd: i.qtd, preco: i.preco, total: vl, ncm: p.ncm || '', lc116: p.lc116 || '', servico: p.tipo === 'Serviço' || modelo === 'NFS-e' };
+      if (modelo === 'NFS-e') { L.iss = (simples || mei) ? 0 : r2(vl * (fz.aliqISS || 3) / 100); L.issTxt = (simples || mei) ? 'Recolhido no DAS' : (fz.aliqISS || 3) + '%'; t.iss += L.iss; }
+      else if (modelo !== 'MDF-e') {
+        L.cfop = modelo === 'CT-e' ? (inter ? '6353' : '5353') : modelo === 'NFC-e' ? '5102' : (inter ? '6101' : '5101');
+        L.cst = mei ? 'CSOSN 102' : simples ? 'CSOSN 101' : 'CST 00';
+        L.icms = mei ? 0 : simples ? r2(vl * 0.0125) : r2(vl * (inter ? 0.12 : ali));
+        if (!simples && !mei) { const pp = reg === 'Lucro Real' ? [0.0165, 0.076] : [0.0065, 0.03]; L.pis = r2(vl * pp[0]); L.cofins = r2(vl * pp[1]); t.pis += L.pis; t.cofins += L.cofins; }
+        t.icms += L.icms;
+      }
+      if (modelo !== 'MDF-e') { L.cbs = r2(vl * 0.009); L.ibs = r2(vl * 0.001); t.cbs += L.cbs; t.ibs += L.ibs; }
+      return L;
+    });
+    Object.keys(t).forEach((k) => { t[k] = r2(t[k]); }); t.desc = r2(t.bruto - t.total);
+    return { linhas, t, ibsObrig: !(simples || mei), regime: reg };
+  }
+  chaveNota(modelo, numero, serie, data) {
+    const e = this.empresa(); const cuf = { MG: '31', SP: '35', SC: '42', RJ: '33', PR: '41', RS: '43' }[e.uf] || '31';
+    const d = String(data || '').split('/'); const aamm = (d[2] || '2026').slice(2) + (d[1] || '11');
+    const cnpj = String(e.cnpj || '').replace(/\D/g, '').padEnd(14, '0').slice(0, 14);
+    const mod = { 'NF-e': '55', 'NFC-e': '65', 'CT-e': '57', 'MDF-e': '58' }[modelo];
+    if (!mod) { let s = '3152'; while (s.length < 50) s += String((numero * 7 + s.length * 3) % 10); return s; }
+    const cnf = String(10000000 + ((numero * 7919) % 89999999)).slice(-8);
+    const base = cuf + aamm + cnpj + mod + String(serie || 1).padStart(3, '0') + String(numero).padStart(9, '0') + '1' + cnf;
+    let soma = 0, peso = 2; for (let i = base.length - 1; i >= 0; i--) { soma += Number(base[i]) * peso; peso = peso === 9 ? 2 : peso + 1; }
+    const dv = 11 - (soma % 11); return base + (dv >= 10 ? 0 : dv);
+  }
+  montarNota(d) {
+    const fz = this.fiscal();
+    const serie = { 'NF-e': fz.serieNFe, 'NFC-e': fz.serieNFCe, 'CT-e': fz.serieCTe, 'MDF-e': fz.serieMDFe }[d.modelo] || 1;
+    const c = this.calcNota(d.modelo, d.itens || [], this.ufDe(d.dest && d.dest.cidade), d.desconto);
+    const dt = d.data || new Date().toLocaleDateString('pt-BR');
+    const agora = new Date(); const hh = d.hora || (String(agora.getHours()).padStart(2, '0') + ':' + String(agora.getMinutes()).padStart(2, '0'));
+    return Object.assign({ id: 'n' + d.modelo + d.numero, serie, data: dt, hora: hh, criadaEm: Date.now(), ambiente: fz.ambiente, chave: this.chaveNota(d.modelo, d.numero, serie, dt),
+      protocolo: '1' + String(d.numero).padStart(6, '0') + String(Date.now()).slice(-8), calc: c, valor: d.modelo === 'MDF-e' ? (d.valorCarga || 0) : (d.modelo === 'CT-e' ? c.t.total : c.t.total), cce: [], eventos: [] }, d);
+  }
+  validarNota(n) {
+    const fz = this.fiscal(); const erros = [];
+    const hoje = new Date(); const v = String((fz.cert && fz.cert.validade) || '').split('/');
+    if (!fz.cert || !fz.cert.arquivo) erros.push('Certificado A1 não configurado. Envie o arquivo .pfx e a senha em Configurações.');
+    else if (v.length === 3 && new Date(+v[2], +v[1] - 1, +v[0]) < hoje) erros.push('Certificado A1 vencido em ' + fz.cert.validade + '. Renove antes de emitir.');
+    if (n.modelo === 'NFC-e' && (!fz.csc || !fz.csc.token)) erros.push('CSC da NFC-e não configurado (gerado no portal da SEFAZ).');
+    if (n.modelo === 'NFS-e' && !fz.im) erros.push('Inscrição municipal não informada (obrigatória na NFS-e).');
+    const doc = String((n.dest && n.dest.doc) || '').replace(/\D/g, '');
+    if ((n.modelo === 'NF-e' || n.modelo === 'NFS-e' || n.modelo === 'CT-e') && doc.length !== 11 && doc.length !== 14) erros.push('Rejeição: destinatário/tomador sem CPF ou CNPJ válido.');
+    (n.calc ? n.calc.linhas : []).forEach((l) => {
+      if ((n.modelo === 'NF-e' || n.modelo === 'NFC-e') && !l.servico && String(l.ncm).replace(/\D/g, '').length !== 8) erros.push('Rejeição 778: NCM inválido no item "' + l.nome + '". Corrija em Cadastros.');
+      if ((n.modelo === 'NF-e' || n.modelo === 'NFC-e') && l.servico) erros.push('O item "' + l.nome + '" é serviço: emita NFS-e para ele.');
+      if (n.modelo === 'NFS-e' && !/^\d{1,2}\.\d{2}$/.test(String(l.lc116 || ''))) erros.push('Rejeição: código de serviço (LC 116) ausente no item "' + l.nome + '".');
+    });
+    if (n.modelo === 'NFC-e' && n.valor > 200000) erros.push('NFC-e acima do limite: use NF-e.');
+    return erros;
+  }
+  proxNumero(modelo) { const ns = this.notas().filter((x) => x.modelo === modelo); const base = { 'NF-e': 1043, 'NFC-e': 312, 'NFS-e': 88, 'CT-e': 0, 'MDF-e': 0 }[modelo] || 0; return Math.max(base, ...ns.map((x) => x.numero)) + 1; }
+  registrarNota(d) {
+    const n = this.montarNota(Object.assign({ numero: d.numero || this.proxNumero(d.modelo) }, d));
+    const erros = this.validarNota(n);
+    n.status = erros.length ? 'Rejeitada' : 'Autorizada'; n.motivo = erros.join(' ');
+    if (erros.length) n.protocolo = '';
+    this.dbSet('notas_' + this.empresaId(), [n].concat(this.notas()));
+    return n;
+  }
+  contasSeed() { return [
+      { id: 'b1', tipo: 'Despesa', desc: 'Compra de madeira · NF 5521', pessoa: 'Madeireira Sul', cat: 'Matéria-prima', venc: '26/11/2026', v: 1250 },
+      { id: 'b3', tipo: 'Despesa', desc: 'DAS outubro', pessoa: 'Receita Federal', cat: 'Impostos', venc: '20/11/2026', v: 512.4 },
+      { id: 'b2', tipo: 'Despesa', desc: 'Energia elétrica', pessoa: 'Cemig', cat: 'Energia', venc: '05/12/2026', v: 480 },
+      { id: 'b4', tipo: 'Despesa', desc: 'Aluguel do galpão', pessoa: 'Imobiliária Centro', cat: 'Aluguel', venc: '10/12/2026', v: 1450 },
+      { id: 'r1', tipo: 'Receita', desc: 'NF-e 1043 · entrada', pessoa: 'Carlos Mendes', cat: 'Vendas', venc: '27/11/2026', v: 1767 },
+      { id: 'r2', tipo: 'Receita', desc: 'NF-e 1043 · parcela 2/2', pessoa: 'Carlos Mendes', cat: 'Vendas', venc: '27/12/2026', v: 1767 },
+      { id: 'r3', tipo: 'Receita', desc: 'NFS-e 88 · montagem', pessoa: 'Loja Casa Bela', cat: 'Serviços', venc: '15/11/2026', v: 650 }
+    ]; }
+  contasTodas() {
+    const lerValor = (s) => { s = String(s || '').trim().replace(/[R$\s]/g, ''); if (s.indexOf(',') < 0 && /^\d+\.\d{1,2}$/.test(s)) return parseFloat(s) || 0; return parseFloat(s.replace(/\./g, '').replace(',', '.')) || 0; };
+    const salvos = this.db('lanc_' + this.empresaId(), []).map((x, i) => ({
+      id: x.id || ('s' + i + ':' + x.desc + '|' + x.venc + '|' + x.valor),
+      tipo: x.tipo, desc: x.desc, pessoa: x.pessoa || '—', cat: x.cat, venc: x.venc,
+      v: typeof x.v === 'number' ? x.v : lerValor(x.valor), pagoInicial: !!x.pago, rec: x.rec || ''
+    }));
+    return salvos.concat(this.contasSeed());
+  }
+  baixasTodas() { return this.db('baixas_' + this.empresaId(), { b1: [{ data: '26/11/2026', v: 1250, forma: 'Boleto', conta: 'Banco Exemplo · ag. 0001', inicial: true }] }); }
+  contaRest(c, bx) { const l = bx[c.id] || (c.pagoInicial ? [{ v: c.v }] : []); return Math.round((c.v - l.reduce((a, b) => a + b.v, 0)) * 100) / 100; }
+  empresaId() { if (true) return 'ipe'; if (this.state.__emp) return this.state.__emp; try { return localStorage.getItem('vincula_empresa') || 'ipe'; } catch (e) { return 'ipe'; } }
+  empresa() { const id = this.empresaId(); return this.lista().find((x) => x.id === id) || this.lista()[0]; }
+  selecionar(id) { try { localStorage.setItem('vincula_empresa', id); } catch (e) {} }
+  trocarEmpresa(id) { this.selecionar(id); this.setState({ __emp: id, regime: null }); }
+  renderVals() {
+    try { localStorage.removeItem('vincula_modo'); } catch (x) {}
+    const e = this.empresa();
+    const v = this._rv();
+    return Object.assign({ ctxVisivel: true, ctx: e, ctxId: e.id, ctxOpcoes: this.lista().map((x) => ({ id: x.id, label: x.nome + ' · ' + x.regime + ' · ' + x.uf })), trocar: (ev) => this.trocarEmpresa(ev.target.value) }, v);
+  }
+
+  constructor(p) { super(p); this.state = { arqNome: '', senha: '', erro: '', aviso: '', msg: '', validando: false, cfg: null, restaurar: false }; this._pfx = null; }
+  _rv() {
+    const st = this.state;
+    const emp = this.empresa();
+    const eid = emp.id;
+    const fz = this.fiscal();
+    const so = (s) => String(s || '').replace(/\D/g, '');
+    const dois = (n) => (n < 10 ? '0' : '') + n;
+    const dataBR = (d) => dois(d.getDate()) + '/' + dois(d.getMonth() + 1) + '/' + d.getFullYear();
+    const fmtCnpj = (n) => n.length === 14 ? n.replace(/(\d{2})(\d{3})(\d{3})(\d{4})(\d{2})/, '$1.$2.$3/$4-$5') : n.length === 11 ? n.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4') : n;
+    const carregarForge = () => new Promise((ok, falha) => {
+      if (window.forge && window.forge.pkcs12) return ok(window.forge);
+      const s = document.createElement('script'); s.src = 'lib/forge.min.js';
+      s.onload = () => ok(window.forge); s.onerror = () => falha(new Error('Não foi possível carregar o leitor de certificado.'));
+      document.head.appendChild(s);
+    });
+    const lerArquivo = (ev) => {
+      const f = ev.target.files && ev.target.files[0]; if (!f) return;
+      if (!/\.(pfx|p12)$/i.test(f.name)) { this._pfx = null; return this.setState({ arqNome: '', erro: 'O certificado A1 é um arquivo .pfx ou .p12.', aviso: '' }); }
+      if (f.size > 50000) { this._pfx = null; return this.setState({ arqNome: '', erro: 'Arquivo grande demais para um certificado A1. Confira se escolheu o arquivo certo.', aviso: '' }); }
+      const r = new FileReader();
+      r.onload = () => { const u8 = new Uint8Array(r.result); let b = ''; for (let i = 0; i < u8.length; i++) b += String.fromCharCode(u8[i]); this._pfx = b; this.setState({ arqNome: f.name, erro: '', aviso: '', msg: '' }); };
+      r.readAsArrayBuffer(f);
+    };
+    const validar = async () => {
+      if (!this._pfx) return this.setState({ erro: 'Escolha o arquivo do certificado (.pfx).' });
+      if (!st.senha) return this.setState({ erro: 'Digite a senha do certificado.' });
+      this.setState({ validando: true, erro: '', aviso: '' });
+      try {
+        const forge = await carregarForge();
+        let p12;
+        try { p12 = forge.pkcs12.pkcs12FromAsn1(forge.asn1.fromDer(this._pfx), st.senha); }
+        catch (e) { return this.setState({ validando: false, senha: '', erro: /MAC|password|Invalid/i.test(e.message) ? 'Senha incorreta para este certificado.' : 'Não foi possível abrir o certificado: ' + e.message }); }
+        const certBags = (p12.getBags({ bagType: forge.pki.oids.certBag })[forge.pki.oids.certBag] || []).map((b) => b.cert).filter(Boolean);
+        const keyBags = (p12.getBags({ bagType: forge.pki.oids.pkcs8ShroudedKeyBag })[forge.pki.oids.pkcs8ShroudedKeyBag] || []).concat(p12.getBags({ bagType: forge.pki.oids.keyBag })[forge.pki.oids.keyBag] || []);
+        if (!keyBags.length) return this.setState({ validando: false, senha: '', erro: 'O arquivo não tem a chave privada. O certificado A1 precisa ser exportado com a chave.' });
+        // certificado do titular: o que não emitiu nenhum outro da cadeia
+        const titular = certBags.find((c) => !certBags.some((o) => o !== c && o.issuer.hash === c.subject.hash && c.subject.hash !== c.issuer.hash)) || certBags[0];
+        const cn = (titular.subject.getField('CN') || {}).value || '';
+        const emissor = (titular.issuer.getField('CN') || {}).value || (titular.issuer.getField('O') || {}).value || '';
+        const m = cn.match(/:(\d{11}|\d{14})\s*$/);
+        const doc = m ? m[1] : so(cn).slice(-14);
+        const nome = cn.replace(/:\d+\s*$/, '');
+        const ini = titular.validity.notBefore, fim = titular.validity.notAfter;
+        const hoje = new Date();
+        if (fim < hoje) return this.setState({ validando: false, senha: '', erro: 'Certificado vencido em ' + dataBR(fim) + '. A SEFAZ recusa certificado vencido.' });
+        const cnpjEmp = so(emp.cnpj);
+        const aviso = doc && cnpjEmp && doc.slice(0, 8) !== cnpjEmp.slice(0, 8) ? 'Atenção: o certificado é de ' + fmtCnpj(doc) + ', e o cadastro desta empresa está com ' + emp.cnpj + '. Para emitir, o CNPJ precisa ser o mesmo (o teste usa o CNPJ do certificado).' : '';
+        const dias = Math.round((fim - hoje) / 86400000);
+        const atual = this.db('fiscal_' + eid, {});
+        this.dbSet('fiscal_' + eid, Object.assign({}, atual, { cert: { arquivo: st.arqNome, titular: nome, doc: fmtCnpj(doc), emissor, validade: dataBR(fim), inicio: dataBR(ini), real: true }, ambiente: 'Homologação' }));
+        this._pfx = null;
+        this.setState({ validando: false, senha: '', arqNome: '', aviso, msg: 'Certificado validado: ' + nome + ' · ' + fmtCnpj(doc) + ' · válido até ' + dataBR(fim) + ' (' + dias + ' dias).' });
+      } catch (e) { this.setState({ validando: false, senha: '', erro: e.message }); }
+    };
+    const cert = fz.cert;
+    const v = String((cert && cert.validade) || '').split('/');
+    const diasCert = v.length === 3 ? Math.round((new Date(+v[2], +v[1] - 1, +v[0]) - new Date()) / 86400000) : null;
+    // emissão
+    const cfg = st.cfg || { cscId: fz.csc ? fz.csc.id : '', cscTok: fz.csc ? fz.csc.token : '', im: fz.im || '', iss: String(fz.aliqISS || 3), serieNFe: String(fz.serieNFe), serieNFCe: String(fz.serieNFCe) };
+    const setCfg = (k) => (e) => this.setState({ cfg: Object.assign({}, cfg, { [k]: e.target.value }), erro: '' });
+    const salvarCfg = () => {
+      const atual = this.db('fiscal_' + eid, {});
+      this.dbSet('fiscal_' + eid, Object.assign({}, atual, { ambiente: 'Homologação', csc: cfg.cscTok ? { id: cfg.cscId, token: cfg.cscTok } : null, im: cfg.im, aliqISS: parseFloat(String(cfg.iss).replace(',', '.')) || 0, serieNFe: parseInt(cfg.serieNFe, 10) || 1, serieNFCe: parseInt(cfg.serieNFCe, 10) || 1 }));
+      this.setState({ cfg: null, msg: 'Configuração de emissão salva.' });
+    };
+    return {
+      empresaTxt: emp.nome + ' · CNPJ ' + emp.cnpj + ' · ' + emp.regime + ' · ' + emp.cidade + '/' + emp.uf,
+      temCert: !!cert, semCert: !cert,
+      certNome: cert ? (cert.titular || cert.arquivo) : '', certDoc: cert && cert.doc ? cert.doc : '—', certEmissor: cert && cert.emissor ? cert.emissor : '—',
+      certVal: cert ? cert.validade + (diasCert !== null ? (diasCert < 0 ? ' · vencido' : ' · ' + diasCert + ' dias') : '') : '', certArq: cert ? cert.arquivo : '',
+      certOrigem: cert && cert.real ? 'Validado neste navegador' : 'Certificado de demonstração (fictício)',
+      certStyle: 'display:inline-block;padding:6px 12px;border-radius:999px;font-weight:700;font-size:12px;' + (!cert || diasCert < 0 ? 'background:#FDECEA;color:#9B1C1C' : diasCert <= 30 ? 'background:#FFF3E0;color:#7A3E06' : 'background:#E6F4F1;color:#0A5F52'),
+      certSelo: !cert ? 'Sem certificado' : diasCert < 0 ? 'Vencido' : diasCert <= 30 ? 'Vence em breve' : 'Válido',
+      removerCert: () => { const a = this.db('fiscal_' + eid, {}); this.dbSet('fiscal_' + eid, Object.assign({}, a, { cert: null })); this.setState({ msg: 'Certificado removido deste navegador.', aviso: '' }); },
+      arqNome: st.arqNome || 'Nenhum arquivo escolhido', lerArquivo,
+      senha: st.senha, setSenha: (e) => this.setState({ senha: e.target.value, erro: '' }),
+      validar, botaoValidar: st.validando ? 'Validando…' : 'Validar e salvar certificado',
+      erro: st.erro, temErro: !!st.erro, aviso: st.aviso, temAviso: !!st.aviso, msg: st.msg, temMsg: !!st.msg, fecharMsg: () => this.setState({ msg: '' }),
+      cscId: cfg.cscId, setCscId: setCfg('cscId'), cscTok: cfg.cscTok, setCscTok: setCfg('cscTok'), im: cfg.im, setIm: setCfg('im'), iss: cfg.iss, setIss: setCfg('iss'),
+      serieNFe: cfg.serieNFe, setSerieNFe: setCfg('serieNFe'), serieNFCe: cfg.serieNFCe, setSerieNFCe: setCfg('serieNFCe'), salvarCfg,
+      pedirRestaurar: () => this.setState({ restaurar: true }), restaurarAberto: st.restaurar, naoRestaurar: () => this.setState({ restaurar: false }),
+      restaurar: () => { try { const ks = []; for (let i = 0; i < localStorage.length; i++) ks.push(localStorage.key(i)); ks.filter((k) => /^vincula_/.test(k) && k.endsWith('_' + eid)).forEach((k) => localStorage.removeItem(k)); } catch (x) {} this.setState({ restaurar: false, cfg: null, msg: 'Dados de demonstração restaurados para ' + emp.nome + '.' }); }
+    };
+  }
+}
+
+DC.start(Component);
+</script>
+<script src="branding.js"></script>
+</body>
+</html>
